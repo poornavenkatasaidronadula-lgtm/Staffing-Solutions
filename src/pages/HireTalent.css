@@ -1,0 +1,168 @@
+/* HireTalent Page */
+.hire-page {}
+
+.hire-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.hire-benefits { position: sticky; top: 100px; }
+
+.hire-benefits__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #f0f4ff;
+  margin-bottom: 24px;
+}
+
+.hire-benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.hire-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.hire-benefit-item svg { color: #22c55e; flex-shrink: 0; margin-top: 2px; }
+
+.hire-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.hire-stat {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(13,21,38,0.9), rgba(17,29,53,0.8));
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.hire-stat__num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+
+.hire-stat__label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Hire Form */
+.hire-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hire-form__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f0f4ff;
+  margin-bottom: 4px;
+}
+
+/* Hiring Type Selector */
+.hire-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.hire-type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.hire-type-btn:hover {
+  background: rgba(59,130,246,0.08);
+  border-color: rgba(59,130,246,0.2);
+}
+
+.hire-type-btn--active {
+  background: rgba(59,130,246,0.12);
+  border-color: rgba(59,130,246,0.4);
+}
+
+.hire-type-btn__icon { font-size: 22px; margin-bottom: 2px; }
+
+.hire-type-btn__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.hire-type-btn__desc {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Success */
+.hire-success {
+  padding: 64px 40px;
+}
+
+.hire-success h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #f0f4ff;
+  margin-bottom: 12px;
+}
+
+.hire-success p {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .hire-layout { grid-template-columns: 1fr; }
+  .hire-benefits { position: static; }
+}
+
+@media (max-width: 640px) {
+  .hire-type-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-form__row { grid-template-columns: 1fr; }
+  .hire-stats { grid-template-columns: 1fr 1fr; }
+  .hire-form { padding: 24px; }
+  .hire-success { padding: 32px 24px; }
+}

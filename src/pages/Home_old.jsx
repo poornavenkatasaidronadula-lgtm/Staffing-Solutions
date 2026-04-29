@@ -1,0 +1,2 @@
+"import { useEffect, useRef, useState } from 'react';\nimport { Link } from 'react-router-dom';\nimport {\n  ArrowRight, CheckCircle, Play, Star, TrendingUp,\n  Users, Clock, Award, ChevronDown, ChevronUp, Zap,\n  Globe, BarChart3, Shield, Rocket, Target\n
+<truncated 45 bytes>

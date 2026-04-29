@@ -1,0 +1,463 @@
+.zyoin-contact-page {
+  background-color: #000000;
+  /* pure black */
+  min-height: 100vh;
+  padding-bottom: 0px; /* Removed massive bottom gap */
+}
+
+/* --- Hero Banner --- */
+.zyoin-contact-hero {
+  position: relative;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  background-color: #040f3b;
+  /* dark blue gradient start matching screenshot */
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 40px; /* shift content down slightly if navbar overlaps, but background covers full height */
+}
+
+.zyoin-contact-hero__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+}
+
+.zyoin-contact-hero__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.zyoin-contact-hero__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.zyoin-contact-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  /* Slight overlap to ensure clean gradient */
+  width: 100%;
+  height: 100%;
+  /* fade from dark blue to transparent */
+  background: linear-gradient(to right, #040f3b 0%, rgba(4, 15, 59, 0.9) 20%, rgba(4, 15, 59, 0) 100%);
+}
+
+.zyoin-contact-hero__content {
+  max-width: 600px;
+}
+
+.zyoin-contact-hero__label {
+  color: #f97316;
+  /* vibrant orange */
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.zyoin-contact-hero__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: -0.02em;
+}
+
+.zyoin-contact-hero__desc {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+}
+
+/* --- Main Content --- */
+.zyoin-contact-main {
+  padding: 80px 0;
+}
+
+.zyoin-contact-main__heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.zyoin-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left Column */
+.zyoin-contact-info-text {
+  font-size: 1rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.zyoin-contact-info-img {
+  width: 80%;
+  /* Match screenshot aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  height: 350px;
+}
+
+.zyoin-contact-info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Column (Form) */
+.zyoin-contact-form-card {
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* clearer white border */
+  border-radius: 12px;
+  padding: 32px; /* Even padding all around */
+  width: 100%;
+  max-width: 530px; /* Precise max-width */
+  margin-left: auto;
+}
+
+.zyoin-form-group {
+  margin-bottom: 10px; /* Extremely tight gap */
+}
+
+.zyoin-form-label {
+  display: block;
+  color: #f97316;
+  /* orange text */
+  font-size: 14px; /* Slightly smaller text */
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.zyoin-form-input {
+  width: 100%;
+  height: 38px; /* Significantly reduced height */
+  background: #2b2b2b;
+  border: none;
+  border-radius: 6px;
+  padding: 0 12px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea.zyoin-form-input {
+  height: auto;
+  min-height: 80px; /* Reduced textarea height */
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.zyoin-form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #f97316;
+}
+
+.zyoin-form-input::placeholder {
+  color: #888;
+}
+
+.zyoin-checkbox-group-inline {
+  display: flex;
+  justify-content: flex-start; /* Aligned left */
+  gap: 32px; /* Wide gap */
+  flex-wrap: wrap;
+}
+
+.zyoin-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Gap between box and text */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.zyoin-checkbox-label input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.zyoin-checkbox-label input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.zyoin-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.zyoin-consent-label input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-top: 3px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.zyoin-consent-label input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.zyoin-consent-label span {
+  color: #e2e8f0;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+/* Recaptcha Mock */
+.zyoin-recaptcha-mock {
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  width: 300px;
+  margin-bottom: 24px;
+}
+
+.zyoin-recaptcha-mock__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.zyoin-recaptcha-checkbox {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+}
+
+.zyoin-recaptcha-checkbox:checked {
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.zyoin-recaptcha-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 2px;
+  color: #22c55e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.zyoin-recaptcha-mock__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 10px;
+}
+
+.zyoin-recaptcha-mock__right img {
+  width: 32px;
+  margin-bottom: 2px;
+}
+
+.zyoin-form-submit {
+  background: #6032eb; /* Lighter, vibrant purple */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 28px; /* Tighter button padding */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+.zyoin-form-submit:hover {
+  background: #4d21d1;
+}
+
+.zyoin-success-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 60px 40px;
+}
+
+.zyoin-success-icon {
+  color: #22c55e;
+  margin: 0 auto 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .zyoin-contact-hero {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .zyoin-contact-hero__bg {
+    width: 100%;
+  }
+
+  .zyoin-contact-hero__overlay {
+    background: linear-gradient(to top, #040f3b 0%, rgba(4, 15, 59, 0.9) 50%, rgba(4, 15, 59, 0) 100%);
+  }
+
+  .zyoin-contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .zyoin-contact-info-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .zyoin-contact-bottom-cards {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+/* Bottom Cards Section */
+.zyoin-contact-bottom-cards {
+  display: flex;
+  justify-content: center; /* Center horizontally like target image */
+  gap: 100px; /* Big gap to spread them out evenly */
+  margin-top: 60px; /* Reduced from 100px */
+  padding-bottom: 40px; /* Reduced from 60px to shrink gap above footer */
+  flex-wrap: wrap;
+}
+
+.zyoin-contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  animation: slideInFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.zyoin-contact-info-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.zyoin-contact-info-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.zyoin-contact-info-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.zyoin-contact-info-icon {
+  width: 56px; /* Slightly larger like target image */
+  height: 56px;
+  background-color: #012b32; /* dark teal background */
+  border-radius: 6px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d2ff; /* bright cyan icon color */
+}
+
+.zyoin-contact-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zyoin-contact-info-label {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.zyoin-contact-info-value {
+  color: #f97316;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.zyoin-contact-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.zyoin-social-link {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #f97316;
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.zyoin-social-link:hover {
+  background: #f97316;
+  color: #000;
+}
