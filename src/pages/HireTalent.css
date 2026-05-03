@@ -106,13 +106,13 @@
 }
 
 .hire-type-btn:hover {
-  background: rgba(59,130,246,0.08);
-  border-color: rgba(59,130,246,0.2);
+  background: rgba(233, 30, 99, 0.08);
+  border-color: rgba(233, 30, 99, 0.2);
 }
 
 .hire-type-btn--active {
-  background: rgba(59,130,246,0.12);
-  border-color: rgba(59,130,246,0.4);
+  background: rgba(233, 30, 99, 0.12);
+  border-color: rgba(233, 30, 99, 0.4);
 }
 
 .hire-type-btn__icon { font-size: 22px; margin-bottom: 2px; }

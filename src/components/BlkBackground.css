@@ -1,0 +1,177 @@
+/* ================================================================
+   BLK Design System Background — exact pixel-perfect replica
+   Colors extracted from screenshot comparison
+   ================================================================ */
+
+/* ── Fixed dark base ── */
+.blk-fixed-base {
+  position: fixed;
+  inset: 0;
+  z-index: -30;
+  background-color: #1e1e2f;
+  background-image: url('/img/dots.png');
+  background-size: contain;
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* ── Full-page absolute layer (scrolls with page) ── */
+.blk-page-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ================================================================
+   THE 7 HERO SQUARES
+   Exact colors from the screenshot:
+   - All squares use dark blue gradient: #1d8cf8 → #3358f4
+   - Top-left large: partially off-screen top-left
+   - Top-right large: partially off-screen top-right
+   ================================================================ */
+
+.blk-square {
+  position: absolute;
+  border-radius: 20%;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(150deg, #1d8cf8 0%, #3358f4 100%);
+}
+
+/* Square 1 — LARGE, top-left (partially off screen) */
+.blk-sq1 {
+  animation: blk-float 4s ease-in-out infinite;
+  height: 300px;
+  width: 300px;
+  opacity: 0.7;
+  left: -30px;
+  top: -130px;
+}
+
+/* Square 2 — LARGE, top-right (partially off screen) */
+.blk-sq2 {
+  animation: blk-float 6s ease-in-out infinite;
+  height: 400px;
+  width: 400px;
+  opacity: 0.6;
+  right: -80px;
+  top: -100px;
+}
+
+/* Square 3 — SMALL, bottom-left (partially off screen) */
+.blk-sq3 {
+  animation: blk-float 5s ease-in-out infinite;
+  height: 200px;
+  width: 200px;
+  opacity: 0.6;
+  left: -50px;
+  bottom: 0px;
+  top: auto;
+}
+
+/* Square 4 — SMALL, center-right area (theme accent) */
+.blk-sq4 {
+  animation: blk-float 10s ease-in-out infinite;
+  height: 100px;
+  width: 100px;
+  opacity: 0.9;
+  right: 27%;
+  top: 70vh;
+  background: linear-gradient(150deg, #1d8cf8 0%, #3358f4 100%);
+}
+
+/* Square 5 — MEDIUM, center (very subtle) */
+.blk-sq5 {
+  animation: blk-float 6s ease-in-out infinite;
+  height: 250px;
+  width: 250px;
+  opacity: 0.1;
+  left: 32%;
+  top: 45vh;
+}
+
+/* Square 6 — SMALL, left side */
+.blk-sq6 {
+  animation: blk-float 9s ease-in-out infinite;
+  left: 5%;
+  top: 35vh;
+  height: 80px;
+  width: 80px;
+  opacity: 0.9;
+  background: linear-gradient(150deg, #1d8cf8 0%, #3358f4 100%);
+}
+
+/* Square 7 — LARGE, bottom-right (partially off screen) */
+.blk-sq7 {
+  animation: blk-float 3s ease-in-out infinite;
+  width: 300px;
+  height: 300px;
+  right: -50px;
+  top: auto;
+  bottom: 0px;
+  opacity: 0.2;
+}
+
+/* ================================================================
+   SCROLL BLOBS — glowing path images at intervals down the page
+   ================================================================ */
+.blk-blob {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+  mix-blend-mode: color-dodge;
+  filter: hue-rotate(220deg) saturate(2);
+}
+
+.blk-blob1 {
+  left: -110px;
+  max-width: 60%;
+  top: 100vh;
+}
+
+.blk-blob2 {
+  right: -250px;
+  left: auto;
+  max-width: 70%;
+  top: 230vh;
+}
+
+.blk-blob3 {
+  left: 50px;
+  max-width: 45%;
+  top: 370vh;
+}
+
+.blk-blob4 {
+  right: 3%;
+  left: auto;
+  max-width: 60%;
+  top: 500vh;
+}
+
+.blk-blob5 {
+  left: -80px;
+  max-width: 50%;
+  top: 640vh;
+}
+
+/* ================================================================
+   FLOAT ANIMATION
+   ================================================================ */
+@keyframes blk-float {
+
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(15px) translateY(10px) rotate(3deg);
+  }
+}

@@ -1,8 +1,7 @@
 .zyoin-contact-page {
-  background-color: #000000;
-  /* pure black */
+  background-color: #1e1e2f;
   min-height: 100vh;
-  padding-bottom: 0px; /* Removed massive bottom gap */
+  padding-bottom: 0;
 }
 
 /* --- Hero Banner --- */
@@ -11,11 +10,10 @@
   height: 450px;
   display: flex;
   align-items: center;
-  background-color: #040f3b;
-  /* dark blue gradient start matching screenshot */
+  background-color: #1e1e2f;
   overflow: hidden;
   margin-top: 0;
-  padding-top: 40px; /* shift content down slightly if navbar overlaps, but background covers full height */
+  padding-top: 40px;
 }
 
 .zyoin-contact-hero__bg {
@@ -47,7 +45,7 @@
   width: 100%;
   height: 100%;
   /* fade from dark blue to transparent */
-  background: linear-gradient(to right, #040f3b 0%, rgba(4, 15, 59, 0.9) 20%, rgba(4, 15, 59, 0) 100%);
+  background: linear-gradient(to right, #1e1e2f 0%, rgba(30, 30, 47, 0.9) 20%, rgba(30, 30, 47, 0) 100%);
 }
 
 .zyoin-contact-hero__content {
@@ -55,8 +53,7 @@
 }
 
 .zyoin-contact-hero__label {
-  color: #f97316;
-  /* vibrant orange */
+  color: #e91e63;
   font-size: 1.1rem;
   font-weight: 500;
   display: block;
@@ -122,30 +119,36 @@
 /* Right Column (Form) */
 .zyoin-contact-form-card {
   background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.4); /* clearer white border */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* clearer white border */
   border-radius: 12px;
-  padding: 32px; /* Even padding all around */
+  padding: 32px;
+  /* Even padding all around */
   width: 100%;
-  max-width: 530px; /* Precise max-width */
+  max-width: 530px;
+  /* Precise max-width */
   margin-left: auto;
 }
 
 .zyoin-form-group {
-  margin-bottom: 10px; /* Extremely tight gap */
+  margin-bottom: 10px;
+  /* Extremely tight gap */
 }
 
 .zyoin-form-label {
   display: block;
-  color: #f97316;
-  /* orange text */
-  font-size: 14px; /* Slightly smaller text */
+  color: #e040fb;
+  /* magenta text */
+  font-size: 14px;
+  /* Slightly smaller text */
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .zyoin-form-input {
   width: 100%;
-  height: 38px; /* Significantly reduced height */
+  height: 38px;
+  /* Significantly reduced height */
   background: #2b2b2b;
   border: none;
   border-radius: 6px;
@@ -158,14 +161,15 @@
 
 textarea.zyoin-form-input {
   height: auto;
-  min-height: 80px; /* Reduced textarea height */
+  min-height: 80px;
+  /* Reduced textarea height */
   padding: 10px 12px;
   resize: vertical;
 }
 
 .zyoin-form-input:focus {
   outline: none;
-  box-shadow: 0 0 0 1px #f97316;
+  box-shadow: 0 0 0 1px #e91e63;
 }
 
 .zyoin-form-input::placeholder {
@@ -174,15 +178,18 @@ textarea.zyoin-form-input {
 
 .zyoin-checkbox-group-inline {
   display: flex;
-  justify-content: flex-start; /* Aligned left */
-  gap: 32px; /* Wide gap */
+  justify-content: flex-start;
+  /* Aligned left */
+  gap: 32px;
+  /* Wide gap */
   flex-wrap: wrap;
 }
 
 .zyoin-checkbox-label {
   display: flex;
   align-items: center;
-  gap: 10px; /* Gap between box and text */
+  gap: 10px;
+  /* Gap between box and text */
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -289,7 +296,7 @@ textarea.zyoin-form-input {
   position: absolute;
   margin-left: 5px;
   margin-top: 2px;
-  color: #22c55e;
+  color: #e91e63;
   font-size: 18px;
   font-weight: bold;
 }
@@ -309,11 +316,12 @@ textarea.zyoin-form-input {
 }
 
 .zyoin-form-submit {
-  background: #6032eb; /* Lighter, vibrant purple */
+  background: linear-gradient(135deg, #e91e63 0%, #e040fb 100%);
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 14px 28px; /* Tighter button padding */
+  padding: 14px 28px;
+  /* Tighter button padding */
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -322,7 +330,7 @@ textarea.zyoin-form-input {
 }
 
 .zyoin-form-submit:hover {
-  background: #4d21d1;
+  background: linear-gradient(135deg, #c2185b 0%, #ab47bc 100%);
 }
 
 .zyoin-success-card {
@@ -333,7 +341,7 @@ textarea.zyoin-form-input {
 }
 
 .zyoin-success-icon {
-  color: #22c55e;
+  color: #e91e63;
   margin: 0 auto 20px;
 }
 
@@ -349,7 +357,7 @@ textarea.zyoin-form-input {
   }
 
   .zyoin-contact-hero__overlay {
-    background: linear-gradient(to top, #040f3b 0%, rgba(4, 15, 59, 0.9) 50%, rgba(4, 15, 59, 0) 100%);
+    background: linear-gradient(to top, #1e1e2f 0%, rgba(30, 30, 47, 0.9) 50%, rgba(30, 30, 47, 0) 100%);
   }
 
   .zyoin-contact-layout {
@@ -371,10 +379,14 @@ textarea.zyoin-form-input {
 /* Bottom Cards Section */
 .zyoin-contact-bottom-cards {
   display: flex;
-  justify-content: center; /* Center horizontally like target image */
-  gap: 100px; /* Big gap to spread them out evenly */
-  margin-top: 60px; /* Reduced from 100px */
-  padding-bottom: 40px; /* Reduced from 60px to shrink gap above footer */
+  justify-content: center;
+  /* Center horizontally like target image */
+  gap: 100px;
+  /* Big gap to spread them out evenly */
+  margin-top: 60px;
+  /* Reduced from 100px */
+  padding-bottom: 40px;
+  /* Reduced from 60px to shrink gap above footer */
   flex-wrap: wrap;
 }
 
@@ -403,6 +415,7 @@ textarea.zyoin-form-input {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -410,14 +423,15 @@ textarea.zyoin-form-input {
 }
 
 .zyoin-contact-info-icon {
-  width: 56px; /* Slightly larger like target image */
+  width: 56px;
   height: 56px;
-  background-color: #012b32; /* dark teal background */
-  border-radius: 6px; 
+  background-color: rgba(233, 30, 99, 0.1);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00d2ff; /* bright cyan icon color */
+  color: #e91e63;
+  /* pink icon color */
 }
 
 .zyoin-contact-info-content {
@@ -433,7 +447,7 @@ textarea.zyoin-form-input {
 }
 
 .zyoin-contact-info-value {
-  color: #f97316;
+  color: #e040fb;
   font-size: 16px;
   text-decoration: none;
   font-weight: 500;
@@ -448,8 +462,8 @@ textarea.zyoin-form-input {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 1px solid #f97316;
-  color: #f97316;
+  border: 1px solid #e91e63;
+  color: #e91e63;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,6 +472,6 @@ textarea.zyoin-form-input {
 }
 
 .zyoin-social-link:hover {
-  background: #f97316;
-  color: #000;
+  background: #e91e63;
+  color: #fff;
 }

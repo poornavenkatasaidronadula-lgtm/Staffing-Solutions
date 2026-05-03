@@ -24,7 +24,7 @@
   transform: translate(-50%, -50%);
   width: 700px;
   height: 400px;
-  background: radial-gradient(ellipse, rgba(59,130,246,0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(233, 30, 99, 0.12) 0%, transparent 70%);
 }
 
 .page-hero__content {
@@ -66,7 +66,7 @@
   transition: opacity 0.3s ease;
 }
 
-.srv-card--blue::before { background: #3b82f6; }
+.srv-card--blue::before { background: #e040fb; }
 .srv-card--purple::before { background: #8b5cf6; }
 .srv-card--teal::before { background: #14b8a6; }
 .srv-card--orange::before { background: #f97316; }
@@ -76,7 +76,7 @@
 
 .srv-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(59,130,246,0.2);
+  border-color: rgba(233, 30, 99, 0.2);
   box-shadow: 0 16px 48px rgba(0,0,0,0.3);
 }
 
@@ -107,7 +107,7 @@
 }
 
 .srv-card__badge {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: linear-gradient(135deg, #e91e63, #e040fb);
   color: white;
   font-size: 10px;
   font-weight: 700;

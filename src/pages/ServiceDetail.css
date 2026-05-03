@@ -44,7 +44,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(4,11,22,0.95) 0%, rgba(4,11,22,0.5) 100%);
+  background: linear-gradient(90deg, rgba(30, 30, 47, 0.95) 0%, rgba(30, 30, 47, 0.5) 100%);
 }
 
 .service-hero__content {
@@ -129,7 +129,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to top, rgba(10, 15, 26, 0.95) 0%, rgba(10, 15, 26, 0.7) 40%, transparent 100%);
+  background: linear-gradient(to top, rgba(30, 30, 47, 0.95) 0%, rgba(30, 30, 47, 0.7) 40%, transparent 100%);
   padding: 40px 25px 25px;
 }
 
@@ -152,7 +152,7 @@
 .service-banner-accent {
   width: 4px;
   height: 24px;
-  background-color: #3b82f6; /* Blue accent */
+  background-color: #e040fb; /* Blue accent */
   display: inline-block;
   flex-shrink: 0;
 }
@@ -240,7 +240,7 @@
 }
 
 .benefit-icon {
-  color: #3b82f6;
+  color: #e040fb;
   flex-shrink: 0;
   margin-top: 3px;
 }

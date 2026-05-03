@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import HireTalent from './pages/HireTalent';
 import ServiceDetail from './pages/ServiceDetail';
+import BlkBackground from './components/BlkBackground';
 import './App.css';
 
 // Scroll to top on route change
@@ -34,6 +35,7 @@ function NotFound() {
 function AppInner() {
   return (
     <>
+      <BlkBackground />
       <ScrollToTop />
       <Navbar />
       <Routes>

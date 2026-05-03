@@ -215,75 +215,23 @@ function FaqItem({ question, answer }) {
 /* ╔═══════════════════════════════════════════╗
    ║  HERO BACKGROUND COMPONENT                ║
    ╚═══════════════════════════════════════════╝ */
+/* ── BLK DESIGN SYSTEM EXACT BACKGROUND ── */
 const HeroBackground = () => (
   <div className="hero__bg-container">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" className="hero__bg-svg">
-      <defs>
-        <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#000000" />
-          <stop offset="100%" stopColor="#0a0a0a" />
-        </linearGradient>
+    {/* Base navy background rendered via CSS on .hero */}
 
-        <linearGradient id="wave1-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00d2ff" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#3a7bd5" stopOpacity="0.05" />
-        </linearGradient>
+    {/* ── Large dark navy blobs (top-left, top-right, bottom-left corners) ── */}
+    <div className="blk-blob blk-blob--top-left" />
+    <div className="blk-blob blk-blob--top-right-1" />
+    <div className="blk-blob blk-blob--top-right-2" />
+    <div className="blk-blob blk-blob--bottom-left" />
 
-        <linearGradient id="wave2-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#20bd70" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#00d2ff" stopOpacity="0.05" />
-        </linearGradient>
+    {/* ── Two bright blue gradient accent squares ── */}
+    <div className="blk-square blk-square--left" />
+    <div className="blk-square blk-square--right" />
 
-        <linearGradient id="wave3-grad" x1="50%" y1="0%" x2="50%" y2="100%">
-          <stop offset="0%" stopColor="#00f2fe" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#4facfe" stopOpacity="0.05" />
-        </linearGradient>
-
-        <filter id="glow-heavy" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="30" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-        
-        <filter id="glow-light" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="8" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
-      
-      <rect width="100%" height="100%" fill="url(#bg-grad)" />
-
-      <g className="hero__wave-group" filter="url(#glow-heavy)">
-        <path d="M1440,0 L600,0 C1200,300 700,600 1440,900 Z" fill="url(#wave1-grad)" className="hero__wave-path hero__wave-path-1" />
-        <path d="M1440,0 L800,0 C1300,400 800,700 1440,900 Z" fill="url(#wave2-grad)" className="hero__wave-path hero__wave-path-2" />
-        <path d="M1440,0 L1000,0 C1400,500 900,800 1440,900 Z" fill="url(#wave3-grad)" className="hero__wave-path hero__wave-path-3" />
-        <path d="M1440,0 L1200,0 C800,350 1300,650 1440,900 Z" fill="url(#wave1-grad)" className="hero__wave-path hero__wave-path-4" />
-      </g>
-
-      <g className="hero__lines-group" fill="none" filter="url(#glow-light)">
-        {/* Layer 1 */}
-        <path d="M650,-100 C1250,300 750,600 1440,900" stroke="#00d2ff" strokeWidth="2" strokeOpacity="0.5" className="hero__line" />
-        <path d="M670,-100 C1270,300 770,600 1440,900" stroke="#20bd70" strokeWidth="1" strokeOpacity="0.6" className="hero__line" />
-        <path d="M690,-100 C1290,300 790,600 1440,900" stroke="#00f2fe" strokeWidth="1.5" strokeOpacity="0.4" className="hero__line" />
-        <path d="M710,-100 C1310,300 810,600 1440,900" stroke="#3a7bd5" strokeWidth="2" strokeOpacity="0.5" className="hero__line" />
-        <path d="M730,-100 C1330,300 830,600 1440,900" stroke="#4facfe" strokeWidth="1" strokeOpacity="0.7" className="hero__line" />
-
-        {/* Layer 2 */}
-        <path d="M850,-100 C1350,400 850,700 1440,900" stroke="#38f9d7" strokeWidth="1.5" strokeOpacity="0.4" className="hero__line" />
-        <path d="M870,-100 C1370,400 870,700 1440,900" stroke="#00d2ff" strokeWidth="2" strokeOpacity="0.5" className="hero__line" />
-        <path d="M890,-100 C1390,400 890,700 1440,900" stroke="#20bd70" strokeWidth="1" strokeOpacity="0.6" className="hero__line" />
-        <path d="M910,-100 C1410,400 910,700 1440,900" stroke="#00f2fe" strokeWidth="2" strokeOpacity="0.4" className="hero__line" />
-        
-        {/* Layer 3 */}
-        <path d="M1050,-100 C1450,500 950,800 1440,900" stroke="#00f2fe" strokeWidth="2" strokeOpacity="0.5" className="hero__line" />
-        <path d="M1070,-100 C1470,500 970,800 1440,900" stroke="#4facfe" strokeWidth="1.5" strokeOpacity="0.6" className="hero__line" />
-        <path d="M1090,-100 C1490,500 990,800 1440,900" stroke="#3a7bd5" strokeWidth="1" strokeOpacity="0.5" className="hero__line" />
-
-        {/* Intersecting Layer */}
-        <path d="M1250,-100 C850,350 1350,650 1440,900" stroke="#00d2ff" strokeWidth="2" strokeOpacity="0.6" className="hero__line" />
-        <path d="M1270,-100 C870,350 1370,650 1440,900" stroke="#38f9d7" strokeWidth="1.5" strokeOpacity="0.5" className="hero__line" />
-        <path d="M1290,-100 C890,350 1390,650 1440,900" stroke="#4facfe" strokeWidth="1" strokeOpacity="0.4" className="hero__line" />
-      </g>
-    </svg>
+    {/* ── Subtle particle dots ── */}
+    <div className="blk-dots" />
   </div>
 );
 
