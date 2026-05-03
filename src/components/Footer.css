@@ -17,7 +17,7 @@
 }
 
 /* Brand Column */
-.footer__brand {}
+/* Brand Column */
 
 .footer__logo {
   display: flex;
@@ -99,7 +99,7 @@
 }
 
 /* Footer Columns */
-.footer__col {}
+/* Footer Columns */
 
 .footer__col-title {
   font-family: 'Plus Jakarta Sans', sans-serif;

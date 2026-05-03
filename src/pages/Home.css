@@ -415,7 +415,7 @@
   gap: 18px;
 }
 
-.edge-metric-item {}
+/* .edge-metric-item styles inherited */
 
 .edge-metric-header {
   display: flex;
@@ -662,7 +662,7 @@
 }
 
 /* ══════════════ SECTORS ══════════════ */
-.sectors-section {}
+/* .sectors-section */
 
 .sectors-layout {
   display: grid;
@@ -787,7 +787,7 @@
 }
 
 /* ══════════════ TESTIMONIALS ══════════════ */
-.testimonials-section {}
+/* .testimonials-section */
 
 .testimonials-wrapper {
   display: grid;
@@ -938,7 +938,7 @@
   flex-shrink: 0;
 }
 
-.testimonial-thumb-info {}
+/* .testimonial-thumb-info */
 
 .testimonial-thumb-name {
   display: block;
@@ -988,7 +988,7 @@
   gap: 32px;
 }
 
-.cta-banner__text {}
+/* .cta-banner__text */
 
 .cta-banner__icon {
   color: #f06292;
@@ -1098,7 +1098,7 @@
 }
 
 /* ══════════════ CONTACT FORM ══════════════ */
-.contact-section {}
+/* .contact-section */
 
 .contact-layout {
   display: grid;
