@@ -303,6 +303,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ══════════════════════════ HOW IT WORKS ══════════════════════════ */}
+      <section className="section process-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <div className="section-label" style={{ justifyContent: 'center' }}>Our Process</div>
+            <h2 className="section-title">Hire Smarter in <span className="text-gradient">3 Simple Steps</span></h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>From first call to final offer — our AI-powered process is built for speed and precision.</p>
+          </div>
+          <div className="process-steps">
+            {[
+              { step: '01', icon: '🎯', title: 'Define Your Need', desc: 'Share your role requirements, culture, and timeline. Our advisors craft a precision hiring brief in under 24 hours.' },
+              { step: '02', icon: '🤖', title: 'AI Matches & Vets', desc: 'Our Edge-AI™ scans 2M+ profiles, ranks by 50+ parameters, and our recruiters curate only the top 1% for your role.' },
+              { step: '03', icon: '🚀', title: 'You Hire, We Handle', desc: 'Receive pre-vetted shortlists within 7 days. We manage scheduling, assessments, and offer negotiation end-to-end.' },
+            ].map(({ step, icon, title, desc }) => (
+              <div key={step} className="process-step">
+                <div className="process-step__number">{step}</div>
+                <div className="process-step__icon">{icon}</div>
+                <h3 className="process-step__title">{title}</h3>
+                <p className="process-step__desc">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══════════════════════════ EDGE AI FEATURE ══════════════════════════ */}
       <section className="section edge-section">
         <div className="container">
@@ -407,36 +432,32 @@ export default function Home() {
       {/* ══════════════════════════ SECTORS ══════════════════════════ */}
       <section className="section sectors-section">
         <div className="container">
-          <div className="sectors-layout">
-            <div className="sectors-content">
-              <div className="section-label">Industries We Serve</div>
-              <h2 className="section-title">
-                Sector-Specific{' '}
-                <span className="text-gradient">Expertise</span>
-              </h2>
-              <p className="section-subtitle">
-                Deep domain knowledge across the most competitive and fast-moving sectors.
-                We understand your industry's unique talent landscape.
-              </p>
-              <Link to="/sectors" className="btn btn-primary" style={{ marginTop: '32px' }}>
-                Explore All Sectors <ArrowRight size={16} />
+          <div className="section-header text-center">
+            <div className="section-label" style={{ justifyContent: 'center' }}>Industries We Serve</div>
+            <h2 className="section-title">Sector-Specific <span className="text-gradient">Expertise</span></h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>Deep domain knowledge across the most competitive and fast-moving sectors.</p>
+          </div>
+          <div className="sector-cards-grid">
+            {[
+              { icon: '🌐', emoji_bg: 'rgba(29,114,232,0.15)', title: 'GCC | Captives', desc: 'Global Capability Centers require specialized niche talent across tech, finance, and ops. We deliver pre-vetted talent at scale.', tag: 'Most Active' },
+              { icon: '🚀', emoji_bg: 'rgba(233,30,99,0.15)', title: 'Startups', desc: 'Scale from 50 to 500+ with agile hiring aligned to your growth stage. We understand the speed and culture startup teams need.', tag: 'New' },
+              { icon: '💻', emoji_bg: 'rgba(139,92,246,0.15)', title: 'Tech-first Companies', desc: 'Deep expertise in engineering, product, data, and AI roles. We source candidates who think in systems and ship fast.' },
+              { icon: '🖥️', emoji_bg: 'rgba(20,184,166,0.15)', title: 'IT | Offshoring', desc: 'Cost-effective Indian talent for global teams across MENA, APAC, ANZ, and beyond. Quality without compromise.' },
+            ].map(({ icon, emoji_bg, title, desc, tag }) => (
+              <Link to="/sectors" key={title} className="sector-big-card">
+                <div className="sector-big-card__icon-wrap" style={{ background: emoji_bg }}>
+                  <span className="sector-big-card__icon">{icon}</span>
+                  {tag && <span className="sector-big-card__tag">{tag}</span>}
+                </div>
+                <div className="sector-big-card__body">
+                  <h3 className="sector-big-card__title">{title}</h3>
+                  <p className="sector-big-card__desc">{desc}</p>
+                </div>
+                <div className="sector-big-card__cta">
+                  Know More <ArrowRight size={15} />
+                </div>
               </Link>
-            </div>
-            <div className="sectors-cards">
-              {sectors.map(({ icon, title, desc, badge }) => (
-                <Link to="/sectors" key={title} className="sector-card">
-                  <div className="sector-card__icon">{icon}</div>
-                  <div className="sector-card__content">
-                    <h3 className="sector-card__title">
-                      {title}
-                      {badge && <span className="sector-card__badge">{badge}</span>}
-                    </h3>
-                    <p className="sector-card__desc">{desc}</p>
-                  </div>
-                  <ArrowRight size={16} className="sector-card__arrow" />
-                </Link>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -479,58 +500,25 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="testimonials-wrapper">
-            <div className="testimonial-main">
-              {testimonials.map((t, i) => (
-                <div key={i} className={`testimonial-card ${i === activeTestimonial ? 'testimonial-card--active' : ''}`}>
-                  <div className="testimonial-stars">
-                    {Array.from({ length: t.rating }).map((_, j) => (
-                      <Star key={j} size={16} fill="#f59e0b" color="#f59e0b" />
-                    ))}
-                  </div>
-                  <p className="testimonial-text">"{t.text}"</p>
-                  <div className="testimonial-author">
-                    <div className="testimonial-avatar">
-                      {t.name.split(' ').map(w => w[0]).join('')}
-                    </div>
-                    <div>
-                      <div className="testimonial-name">{t.name}</div>
-                      <div className="testimonial-role">{t.role}</div>
-                    </div>
+          {/* Testimonials grid */}
+          <div className="testimonials-grid">
+            {testimonials.map((t, i) => (
+              <div key={i} className="tcard">
+                <div className="tcard__stars">
+                  {Array.from({ length: t.rating }).map((_, j) => (
+                    <Star key={j} size={14} fill="#f59e0b" color="#f59e0b" />
+                  ))}
+                </div>
+                <p className="tcard__text">"{t.text}"</p>
+                <div className="tcard__author">
+                  <div className="tcard__avatar">{t.name.split(' ').map(w => w[0]).join('')}</div>
+                  <div>
+                    <span className="tcard__name">{t.name}</span>
+                    <span className="tcard__role">{t.role}</span>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Dots Navigation */}
-            <div className="testimonial-dots">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  className={`testimonial-dot ${i === activeTestimonial ? 'testimonial-dot--active' : ''}`}
-                  onClick={() => setActiveTestimonial(i)}
-                />
-              ))}
-            </div>
-
-            {/* Side cards */}
-            <div className="testimonial-sidebar">
-              {testimonials.map((t, i) => (
-                <button
-                  key={i}
-                  className={`testimonial-thumb ${i === activeTestimonial ? 'testimonial-thumb--active' : ''}`}
-                  onClick={() => setActiveTestimonial(i)}
-                >
-                  <div className="testimonial-thumb-avatar">
-                    {t.name.split(' ').map(w => w[0]).join('')}
-                  </div>
-                  <div className="testimonial-thumb-info">
-                    <span className="testimonial-thumb-name">{t.name}</span>
-                    <span className="testimonial-thumb-company">{t.company}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
