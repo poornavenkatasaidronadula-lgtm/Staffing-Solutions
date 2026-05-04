@@ -278,7 +278,6 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════ SECTORS (Industries We Serve) ══════════════════════════ */}
-      {/* Exact Zyoin Structure: Immediately after Hero */}
       <section className="section sectors-section" style={{ paddingTop: '100px' }}>
         <div className="container">
           <div className="section-header text-center">
@@ -310,51 +309,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ SERVICES (End-to-End Talent Solutions) ══════════════════════════ */}
-      {/* Exact Zyoin Structure: Services come next */}
+      {/* ══════════════════════════ SERVICES (Sticky Premium Layout) ══════════════════════════ */}
       <section className="section services-section">
         <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-title">End-to-End <span className="text-gradient">Talent Solutions</span></h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              From entry-level to C-suite, contract to permanent — we cover every hiring need
-              with speed, precision, and strategic foresight.
-            </p>
-          </div>
+          <div className="services-sticky-layout">
+            <div className="services-sticky-left">
+              <div className="sticky-content">
+                <div className="section-label">What We Offer</div>
+                <h2 className="section-title">End-to-End <br/><span className="text-gradient">Talent Solutions</span></h2>
+                <p className="section-subtitle">
+                  From entry-level to C-suite, contract to permanent — we cover every hiring need
+                  with speed, precision, and strategic foresight.
+                </p>
+                <Link to="/contact" className="btn btn-outline" style={{ marginTop: '24px' }}>
+                  Explore All Services <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
 
-          <div className="services-premium-list">
-            {services.map((service, i) => (
-              <Link key={service.title} to={service.link} className="service-row-card">
-                <div className="service-row-card__icon-box">
-                  <span className="service-row-card__icon">{service.icon}</span>
-                </div>
-                <div className="service-row-card__content">
-                  <h3 className="service-row-card__title">
-                    {service.title}
-                    {service.badge && <span className="service-row-card__badge">{service.badge}</span>}
-                  </h3>
-                  <p className="service-row-card__desc">{service.desc}</p>
-                </div>
-                <div className="service-row-card__action">
-                  <ArrowRight size={24} className="service-row-card__arrow" />
-                </div>
-              </Link>
-            ))}
+            <div className="services-sticky-right">
+              <div className="services-premium-list">
+                {services.map((service, i) => (
+                  <Link key={service.title} to={service.link} className="service-row-card">
+                    <div className="service-row-card__icon-box">
+                      <span className="service-row-card__icon">{service.icon}</span>
+                    </div>
+                    <div className="service-row-card__content">
+                      <h3 className="service-row-card__title">
+                        {service.title}
+                        {service.badge && <span className="service-row-card__badge">{service.badge}</span>}
+                      </h3>
+                      <p className="service-row-card__desc">{service.desc}</p>
+                    </div>
+                    <div className="service-row-card__action">
+                      <ArrowRight size={24} className="service-row-card__arrow" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════ TESTIMONIALS (From Their Experience) ══════════════════════════ */}
-      {/* Exact Zyoin Structure: Testimonials follows services */}
-      <section className="section testimonials-section">
+      {/* ══════════════════════════ TESTIMONIALS (Marquee) ══════════════════════════ */}
+      <section className="section testimonials-section" style={{ overflow: 'hidden' }}>
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">From Their Experience <span className="text-gradient">to Your Inspiration</span></h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>Trusted by startups, unicorns, and enterprises.</p>
           </div>
+        </div>
 
-          <div className="testimonials-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} className="tcard">
+        <div className="testimonials-marquee">
+          <div className="testimonials-marquee-track">
+            {/* Double map for infinite scroll effect */}
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <div key={i} className="tcard tcard--marquee">
                 <div className="tcard__stars">
                   {Array.from({ length: t.rating }).map((_, j) => (
                     <Star key={j} size={14} fill="#f59e0b" color="#f59e0b" />
@@ -374,20 +385,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ CONTACT FORM (Fill Out the form to get started) ══════════════════════════ */}
-      {/* Exact Zyoin Structure: Contact form next */}
+      {/* ══════════════════════════ CONTACT FORM ══════════════════════════ */}
       <section className="section contact-section" id="contact">
         <div className="container">
           <div className="contact-layout">
             <div className="contact-info">
-              <h2 className="section-title">Fill Out the form to <span className="text-gradient">get started</span></h2>
+              <div className="section-label">Get Started</div>
+              <h2 className="section-title">
+                Let's Find Your <span className="text-gradient">Perfect Hire</span>
+              </h2>
               <p className="section-subtitle">
-                Looking to hire or find a job? We help businesses hire top talent and job seekers find great opportunities. Reach out and let's get started.
+                Fill out the form and our talent advisors will reach out within 24 hours.
+                No spam, just solutions.
               </p>
+
               <div className="contact-points">
                 {[
                   { icon: '⚡', text: 'Response within 24 hours guaranteed' },
                   { icon: '🎯', text: 'Tailored hiring strategy for your needs' },
+                  { icon: '🆓', text: 'First consultation is completely free' },
                   { icon: '🌐', text: 'Available across 10+ countries' },
                 ].map(({ icon, text }) => (
                   <div key={text} className="contact-point">
@@ -445,15 +461,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ FAQ (Zyoin is India's leading...) ══════════════════════════ */}
-      {/* Exact Zyoin Structure: FAQ at the bottom */}
+      {/* ══════════════════════════ FAQ ══════════════════════════ */}
       <section className="section faq-section" id="faq">
         <div className="container">
           <div className="faq-layout">
             <div className="faq-header">
-              <h2 className="section-title">Frequently Asked <span className="text-gradient">Questions</span></h2>
-              <p className="section-subtitle">Everything you need to know about our hiring process, technology, and solutions.</p>
+              <div className="section-label">Got Questions?</div>
+              <h2 className="section-title">
+                Frequently Asked <span className="text-gradient">Questions</span>
+              </h2>
+              <p className="section-subtitle">
+                Everything you need to know about our hiring process, technology, and solutions.
+              </p>
+              <Link to="/contact" className="btn btn-outline" style={{ marginTop: '24px' }}>
+                Ask Us Anything <ArrowRight size={16} />
+              </Link>
             </div>
+
             <div className="faq-list">
               {faqs.map(({ q, a }) => (
                 <FaqItem key={q} question={q} answer={a} />
