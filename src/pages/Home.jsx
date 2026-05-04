@@ -367,24 +367,30 @@ export default function Home() {
             <h2 className="section-title">Sector-Specific <span className="text-gradient">Expertise</span></h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>Deep domain knowledge across the most competitive and fast-moving sectors.</p>
           </div>
-          <div className="sector-cards-grid">
+          <div className="sector-ai-grid">
             {[
-              { icon: '🌐', emoji_bg: 'rgba(29,114,232,0.15)', title: 'GCC | Captives', desc: 'Global Capability Centers require specialized niche talent across tech, finance, and ops. We deliver pre-vetted talent at scale.', tag: 'Most Active' },
-              { icon: '🚀', emoji_bg: 'rgba(233,30,99,0.15)', title: 'Startups', desc: 'Scale from 50 to 500+ with agile hiring aligned to your growth stage. We understand the speed and culture startup teams need.', tag: 'New' },
-              { icon: '💻', emoji_bg: 'rgba(139,92,246,0.15)', title: 'Tech-first Companies', desc: 'Deep expertise in engineering, product, data, and AI roles. We source candidates who think in systems and ship fast.' },
-              { icon: '🖥️', emoji_bg: 'rgba(20,184,166,0.15)', title: 'IT | Offshoring', desc: 'Cost-effective Indian talent for global teams across MENA, APAC, ANZ, and beyond. Quality without compromise.' },
-            ].map(({ icon, emoji_bg, title, desc, tag }) => (
-              <Link to="/sectors" key={title} className="sector-big-card">
-                <div className="sector-big-card__icon-wrap" style={{ background: emoji_bg }}>
-                  <span className="sector-big-card__icon">{icon}</span>
-                  {tag && <span className="sector-big-card__tag">{tag}</span>}
+              { id: 'gcc', img: 'sector_gcc.png', icon: '🌐', title: 'GCC | Captives', desc: 'Global Capability Centers require specialized niche talent across tech, finance, and ops. We deliver pre-vetted talent at scale.', tag: 'Most Active' },
+              { id: 'startups', img: 'sector_startups.png', icon: '🚀', title: 'Startups', desc: 'Scale from 50 to 500+ with agile hiring aligned to your growth stage. We understand the speed and culture startup teams need.', tag: 'New' },
+              { id: 'tech', img: 'sector_tech.png', icon: '💻', title: 'Tech-first Companies', desc: 'Deep expertise in engineering, product, data, and AI roles. We source candidates who think in systems and ship fast.' },
+              { id: 'offshore', img: 'sector_offshore.png', icon: '🖥️', title: 'IT | Offshoring', desc: 'Cost-effective Indian talent for global teams across MENA, APAC, ANZ, and beyond. Quality without compromise.' },
+            ].map(({ id, img, icon, title, desc, tag }) => (
+              <Link to="/sectors" key={id} className="sector-ai-card">
+                <div className="sector-ai-card__bg">
+                  <img src={`/images/${img}`} alt={title} />
+                  <div className="sector-ai-card__overlay"></div>
                 </div>
-                <div className="sector-big-card__body">
-                  <h3 className="sector-big-card__title">{title}</h3>
-                  <p className="sector-big-card__desc">{desc}</p>
-                </div>
-                <div className="sector-big-card__cta">
-                  Know More <ArrowRight size={15} />
+                <div className="sector-ai-card__content">
+                  <div className="sector-ai-card__header">
+                    <span className="sector-ai-card__icon">{icon}</span>
+                    {tag && <span className="sector-ai-card__tag">{tag}</span>}
+                  </div>
+                  <div className="sector-ai-card__body">
+                    <h3 className="sector-ai-card__title">{title}</h3>
+                    <p className="sector-ai-card__desc">{desc}</p>
+                  </div>
+                  <div className="sector-ai-card__cta">
+                    Know More <ArrowRight size={15} />
+                  </div>
                 </div>
               </Link>
             ))}
