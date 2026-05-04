@@ -1514,15 +1514,14 @@
 /* Amethyst purple (center) */
 .bv3--amethyst {
   background:
-    radial-gradient(ellipse at 50% 25%, rgba(200,120,255,0.25) 0%, transparent 55%),
-    radial-gradient(ellipse at 15% 75%, rgba(140,60,220,0.35) 0%, transparent 50%),
-    radial-gradient(ellipse at 85% 75%, rgba(140,60,220,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 0%, rgba(220,150,255,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 75%, rgba(140,60,220,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 75%, rgba(140,60,220,0.3) 0%, transparent 50%),
     linear-gradient(165deg, #3a0b62 0%, #581896 25%, #7a2fc8 45%, #5a1a98 70%, #2c0850 100%);
   border: 1px solid rgba(180,100,255,0.45);
   box-shadow: 0 8px 30px rgba(100,30,200,0.45);
-  overflow: visible;
-  padding: 20px;
-  padding-top: 70px; /* Space for the orb that floats above */
+  overflow: hidden;
+  padding: 16px;
 }
 
 /* Pearl white (Human + AI Synergy) */
@@ -1591,30 +1590,37 @@
 
 /* ─── CENTER AMETHYST CARD ─── */
 .bv3--center {
-  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
+  gap: 0;
 }
 
 /* Floating orb above center card */
 .bv3-orb {
-  position: absolute;
-  top: -55px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 110px;
-  height: 110px;
-  z-index: 20;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  margin: 0 auto 12px auto;
   filter:
-    drop-shadow(0 0 12px rgba(200,150,255,0.9))
-    drop-shadow(0 0 30px rgba(180,100,255,0.6));
+    drop-shadow(0 0 15px rgba(200,150,255,0.9))
+    drop-shadow(0 0 35px rgba(180,100,255,0.6));
   animation: bentOrbFloat 5s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
 }
 @keyframes bentOrbFloat {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
-.bv3-orb__img { width: 100%; height: 100%; object-fit: contain; }
+.bv3-orb__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 /* Circuit board decorations */
 .bv3-circuit {

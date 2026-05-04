@@ -309,7 +309,7 @@ export default function Home() {
             {/* ─── COL 2-3, ROW 1-2: Center Amethyst ─── */}
             <div className="bv3 bv3--amethyst bv3--center" style={{ gridColumn: '2 / span 2', gridRow: '1 / span 2' }}>
               <div className="bv3-orb">
-                <img src="/images/bento_main_premium.png" alt="AI Diamond Orb" className="bv3-orb__img" />
+                <img src="/images/diamond_gem_orb.png" alt="AI Diamond Orb" className="bv3-orb__img" />
               </div>
               <div className="bv3-circuit bv3-circuit--left" />
               <div className="bv3-circuit bv3-circuit--right" />
