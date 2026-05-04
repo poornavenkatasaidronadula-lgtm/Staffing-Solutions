@@ -293,84 +293,78 @@ export default function Home() {
 
       {/* ══════════════════════════ PREMIUM BENTO GRID (AI Features & Stats) ══════════════════════════ */}
       <section className="bento-section">
-        <div className="container">
-          <div className="bento-grid">
+        <div className="bento-outer-frame">
+          <div className="bento-grid-v2">
 
-            {/* Col 1: Stats Stack */}
-            <div className="bento-card bento-card--stat bento-stat-20" style={{ gridRow: 'span 1' }}>
-              <h3>20</h3>
-              <p>Years of Industry Presence</p>
+            {/* ── COL 1, ROW 1: "20" Blue Metallic ── */}
+            <div className="bv2-card bv2-card--blue-metal bv2-stat">
+              <h3 className="bv2-stat__num">20</h3>
+              <p className="bv2-stat__label">Years of Industry<br/>Presence</p>
             </div>
 
-            {/* Col 2+3: Main Image Card (spans 2 cols, 2 rows) */}
-            <div className="bento-card bento-card--main-img" style={{ gridColumn: 'span 2', gridRow: 'span 2' }}>
-              <img src="/images/bento_main_premium.png" alt="AI Augmented Talent Advisory" className="bento-main-bg-img" />
-              <div className="bento-main-overlay">
-                <div className="bento-label">Talent Advisory with</div>
-                <h2>Deep Evaluation &amp; Smart Hiring with AI</h2>
+            {/* ── COL 2–3, ROW 1–2: Center Amethyst + Orb ── */}
+            <div className="bv2-card bv2-card--amethyst bv2-center" style={{ gridColumn: 'span 2', gridRow: 'span 2' }}>
+              <div className="bv2-orb-wrap">
+                <img src="/images/bento_main_premium.png" alt="AI Diamond Orb" className="bv2-orb-img" />
+              </div>
+              <div className="bv2-center__text">
+                <span className="bv2-label">Talent Advisory with</span>
+                <h2 className="bv2-center__title">Deep Evaluation &amp; Smart Hiring with AI</h2>
               </div>
             </div>
 
-            {/* Col 4: Human + AI Synergy */}
-            <div className="bento-card bento-card--feature bento-synergy" style={{ gridRow: 'span 1' }}>
-              <div className="bento-icon-wrapper">
-                <Target size={28} />
+            {/* ── COL 4, ROW 1–2: Human + AI Synergy Pearl ── */}
+            <div className="bv2-card bv2-card--pearl bv2-feature" style={{ gridRow: 'span 2' }}>
+              <div className="bv2-pearl-icon">🤖</div>
+              <h4 className="bv2-feature__title">Human + AI Synergy</h4>
+              <p className="bv2-feature__desc">Automation empowers (Not replaces) our seasoned recruiters.</p>
+            </div>
+
+            {/* ── COL 1, ROW 2: "25K+" Lapis Lazuli ── */}
+            <div className="bv2-card bv2-card--lapis bv2-stat">
+              <h3 className="bv2-stat__num">25K+</h3>
+              <p className="bv2-stat__label">Hires</p>
+            </div>
+
+            {/* ── COL 4, ROW 3: "1500+" Dark Metallic ── */}
+            <div className="bv2-card bv2-card--dark-metal bv2-stat" style={{ gridRow: 'span 1' }}>
+              <h3 className="bv2-stat__num bv2-stat__num--orange">1500+</h3>
+              <p className="bv2-stat__label">Customers</p>
+              <div className="bv2-led-dots">
+                <span className="bv2-dot bv2-dot--red"></span>
+                <span className="bv2-dot bv2-dot--yellow"></span>
+                <span className="bv2-dot bv2-dot--blue"></span>
               </div>
+            </div>
+
+            {/* ── COL 1, ROW 3: More Accurate Matches Carbon ── */}
+            <div className="bv2-card bv2-card--carbon bv2-feature">
               <div>
-                <h4>Human + AI Synergy</h4>
-                <p>Automation empowers (not replaces) our seasoned recruiters.</p>
+                <h4 className="bv2-feature__title bv2-feature__title--light">More Accurate Matches</h4>
+                <p className="bv2-feature__desc">80% reduction in candidate mismatches, 63% higher offer-acceptance</p>
               </div>
+              <div className="bv2-gold-icon">📋</div>
             </div>
 
-            {/* Col 1: 25K Hires */}
-            <div className="bento-card bento-card--stat bento-stat-25k" style={{ gridRow: 'span 1' }}>
-              <h3>25K+</h3>
-              <p>Hires</p>
+            {/* ── COL 2, ROW 3: Deeply Evaluated Talent ── */}
+            <div className="bv2-card bv2-card--dark bv2-feature">
+              <div className="bv2-feature-icon">👥</div>
+              <h4 className="bv2-feature__title">Deeply Evaluated Talent</h4>
+              <p className="bv2-feature__desc">Interview only those who've cleared AI and expert benchmarks</p>
             </div>
 
-            {/* Col 4: 1500+ Customers */}
-            <div className="bento-card bento-card--stat bento-stat-1500" style={{ gridRow: 'span 1' }}>
-              <h3>1500+</h3>
-              <p>Customers</p>
+            {/* ── COL 3, ROW 3: Efficient Scale ── */}
+            <div className="bv2-card bv2-card--dark bv2-feature">
+              <div className="bv2-feature-icon">⚙️</div>
+              <h4 className="bv2-feature__title">Efficient Scale</h4>
+              <p className="bv2-feature__desc">Handle campus drives, volume hiring, and niche searches with confidence</p>
             </div>
 
-            {/* Row 3: Col 1 — More Accurate Matches */}
-            <div className="bento-card bento-card--feature bento-accurate">
-              <div>
-                <h4>More Accurate Matches</h4>
-                <p>80% reduction in candidate mismatches, 63% higher offer-acceptance.</p>
-              </div>
-              <div className="bento-icon-wrapper" style={{ alignSelf: 'flex-end', marginTop: '16px' }}>
-                <CheckCircle size={28} />
-              </div>
-            </div>
-
-            {/* Row 3: Col 2 — Deeply Evaluated Talent */}
-            <div className="bento-card bento-card--feature">
-              <div className="bento-icon-wrapper">
-                <Users size={28} />
-              </div>
-              <div>
-                <h4>Deeply Evaluated Talent</h4>
-                <p>Interview only those who've cleared AI and expert benchmarks.</p>
-              </div>
-            </div>
-
-            {/* Row 3: Col 3 — Efficient Scale */}
-            <div className="bento-card bento-card--feature">
-              <div className="bento-icon-wrapper">
-                <Rocket size={28} />
-              </div>
-              <div>
-                <h4>Efficient Scale</h4>
-                <p>Handle campus drives, volume hiring, and niche searches with confidence.</p>
-              </div>
-            </div>
-
-            {/* Row 3: Col 4 — 2Mn+ */}
-            <div className="bento-card bento-card--stat bento-stat-2mn">
-              <h3>2Mn+</h3>
-              <p>Talent Pool</p>
+            {/* ── COL 4, ROW 4: "2Mn+" Bronze ── */}
+            <div className="bv2-card bv2-card--bronze bv2-stat">
+              <h3 className="bv2-stat__num bv2-stat__num--orange">2Mn+</h3>
+              <p className="bv2-stat__label">Talent Pool</p>
+              <div className="bv2-diamond-mark">✦</div>
             </div>
 
           </div>
