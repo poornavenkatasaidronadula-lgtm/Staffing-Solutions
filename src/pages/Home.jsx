@@ -293,92 +293,12 @@ export default function Home() {
 
       {/* ══════════════════════════ PREMIUM BENTO GRID ══════════════════════════ */}
       <section className="bento-section">
-        <div className="bento-v3-frame">
-
-          {/* Gold trim top line */}
-          <div className="bento-v3-trim bento-v3-trim--top"></div>
-
-          <div className="bento-v3-grid">
-
-            {/* ─── COL 1 ROW 1: "20" Blue Metallic ─── */}
-            <div className="bv3 bv3--blue-metal" style={{ gridColumn: '1', gridRow: '1' }}>
-              <div className="bv3__num">20</div>
-              <div className="bv3__label">Years of Industry<br/>Presence</div>
-            </div>
-
-            {/* ─── COL 2-3, ROW 1-2: Center Amethyst ─── */}
-            <div className="bv3 bv3--amethyst bv3--center" style={{ gridColumn: '2 / span 2', gridRow: '1 / span 2' }}>
-              <div className="bv3-orb">
-                <img src="/images/diamond_gem_orb.png" alt="AI Diamond Orb" className="bv3-orb__img" />
-              </div>
-              <div className="bv3-circuit bv3-circuit--left" />
-              <div className="bv3-circuit bv3-circuit--right" />
-              <div className="bv3__center-text">
-                <p className="bv3__center-label">Talent Advisory with</p>
-                <h2 className="bv3__center-title">Deep Evaluation &amp; Smart Hiring with AI</h2>
-              </div>
-            </div>
-
-            {/* ─── COL 4, ROW 1: "Human + AI Synergy" Pearl ─── */}
-            <div className="bv3 bv3--pearl" style={{ gridColumn: '4', gridRow: '1' }}>
-              <div className="bv3__pearl-icon">🤖</div>
-              <div className="bv3__feature-text">
-                <h4 className="bv3__feature-title bv3__feature-title--dark">Human + AI Synergy</h4>
-                <p className="bv3__feature-desc bv3__feature-desc--dark">Automation empowers (Not replaces) our seasoned recruiters.</p>
-              </div>
-            </div>
-
-            {/* ─── COL 1, ROW 2: "25K+" Lapis Lazuli ─── */}
-            <div className="bv3 bv3--lapis" style={{ gridColumn: '1', gridRow: '2' }}>
-              <div className="bv3__num">25K+</div>
-              <div className="bv3__label">Hires</div>
-            </div>
-
-            {/* ─── COL 4, ROW 2: "1500+" Dark Metal ─── */}
-            <div className="bv3 bv3--dark-metal" style={{ gridColumn: '4', gridRow: '2' }}>
-              <div className="bv3__num bv3__num--orange">1500+</div>
-              <div className="bv3__label">Customers</div>
-              <div className="bv3-leds">
-                <span className="bv3-led bv3-led--r" />
-                <span className="bv3-led bv3-led--y" />
-                <span className="bv3-led bv3-led--b" />
-              </div>
-            </div>
-
-            {/* ─── COL 1, ROW 3: More Accurate — Carbon Fiber ─── */}
-            <div className="bv3 bv3--carbon" style={{ gridColumn: '1', gridRow: '3' }}>
-              <div className="bv3__feature-text">
-                <h4 className="bv3__feature-title">More Accurate Matches</h4>
-                <p className="bv3__feature-desc">80% reduction in candidate mismatches, 63% higher offer-acceptance</p>
-              </div>
-              <div className="bv3__gold-icon">🔍</div>
-            </div>
-
-            {/* ─── COL 2, ROW 3: Deeply Evaluated — Dark ─── */}
-            <div className="bv3 bv3--dark" style={{ gridColumn: '2', gridRow: '3' }}>
-              <div className="bv3__feat-icon">👥</div>
-              <h4 className="bv3__feature-title">Deeply Evaluated Talent</h4>
-              <p className="bv3__feature-desc">Interview only those who've cleared AI and expert benchmarks</p>
-            </div>
-
-            {/* ─── COL 3, ROW 3: Efficient Scale — Dark ─── */}
-            <div className="bv3 bv3--dark" style={{ gridColumn: '3', gridRow: '3' }}>
-              <div className="bv3__feat-icon">⚙️</div>
-              <h4 className="bv3__feature-title">Efficient Scale</h4>
-              <p className="bv3__feature-desc">Handle campus drives, volume hiring, and niche searches with confidence</p>
-            </div>
-
-            {/* ─── COL 4, ROW 3: "2Mn+" Bronze ─── */}
-            <div className="bv3 bv3--bronze" style={{ gridColumn: '4', gridRow: '3' }}>
-              <div className="bv3__num bv3__num--orange">2Mn+</div>
-              <div className="bv3__label">Talent Pool</div>
-              <span className="bv3__diamond">✦</span>
-            </div>
-
-          </div>
-
-          {/* Gold trim bottom line */}
-          <div className="bento-v3-trim bento-v3-trim--bottom"></div>
+        <div className="bento-img-wrapper">
+          <img
+            src="/images/bento_full_infographic.png"
+            alt="AI Augmented Talent Advisory"
+            className="bento-final-img"
+          />
         </div>
       </section>
 
