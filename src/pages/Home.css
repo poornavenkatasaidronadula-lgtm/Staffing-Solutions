@@ -1430,32 +1430,290 @@
   }
 }
 
-/* ══════════════ BENTO GRID LAYOUT ══════════════ */
+/* ══════════════════════════════════════════════════════
+   BENTO V3 — Exact Layout Matching Reference Screenshot
+══════════════════════════════════════════════════════ */
+
 .bento-section {
-  padding: 60px 0 100px;
+  padding: 60px 0 80px;
   position: relative;
   z-index: 2;
 }
 
-.bento-img-wrapper {
+/* Outer metallic frame */
+.bento-v3-frame {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 16px;
+  background: linear-gradient(180deg, #12111f 0%, #0c0b18 100%);
+  border: 2px solid #3b3960;
+  border-radius: 28px;
+  box-shadow:
+    0 0 0 1px rgba(160,140,255,0.08),
+    0 40px 100px rgba(0,0,0,0.7),
+    inset 0 0 60px rgba(60,50,120,0.15);
+  position: relative;
 }
 
-.bento-full-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
-  transition: transform 0.4s ease;
+/* Gold/Bronze trim lines at top and bottom */
+.bento-v3-trim {
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #6a5a30 10%,
+    #c8a84b 30%,
+    #f0d070 50%,
+    #c8a84b 70%,
+    #6a5a30 90%,
+    transparent 100%);
+  border-radius: 2px;
+}
+.bento-v3-trim--top { margin-bottom: 14px; }
+.bento-v3-trim--bottom { margin-top: 14px; }
+
+/* The 4-col 3-row grid */
+.bento-v3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1.6fr 1fr;
+  grid-template-rows: 150px 150px 190px;
+  gap: 12px;
 }
 
-.bento-full-img:hover {
-  transform: scale(1.01);
+/* Base card */
+.bv3 {
+  border-radius: 18px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bv3:hover { transform: translateY(-3px); }
+
+/* ─── MATERIAL TEXTURES ─── */
+
+/* Blue metallic (20 years) */
+.bv3--blue-metal {
+  background: linear-gradient(145deg, #0d3b6e 0%, #1a5590 50%, #0f3d73 100%);
+  border: 1px solid rgba(80,160,255,0.35);
+  box-shadow: 0 4px 20px rgba(0,60,160,0.5), inset 0 1px 0 rgba(255,255,255,0.12);
 }
 
+/* Lapis lazuli (25K+) */
+.bv3--lapis {
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(200,160,30,0.2) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(200,160,30,0.12) 0%, transparent 40%),
+    linear-gradient(145deg, #162d5c 0%, #0e2347 40%, #1a2f6a 70%, #0b1c40 100%);
+  border: 1px solid rgba(200,160,30,0.4);
+  box-shadow: 0 4px 20px rgba(0,20,80,0.6), inset 0 1px 0 rgba(200,160,30,0.2);
+}
+
+/* Amethyst purple (center) */
+.bv3--amethyst {
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(200,120,255,0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(140,60,220,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 75%, rgba(140,60,220,0.25) 0%, transparent 50%),
+    linear-gradient(165deg, #3a0b62 0%, #581896 25%, #7a2fc8 45%, #5a1a98 70%, #2c0850 100%);
+  border: 1px solid rgba(180,100,255,0.45);
+  box-shadow: 0 8px 30px rgba(100,30,200,0.45);
+  overflow: visible;
+  padding: 20px;
+  padding-top: 70px; /* Space for the orb that floats above */
+}
+
+/* Pearl white (Human + AI Synergy) */
+.bv3--pearl {
+  background: linear-gradient(145deg, #f5f2ea 0%, #ede7d6 45%, #e5dcc8 75%, #ede7d6 100%);
+  border: 1px solid rgba(190,160,90,0.45);
+  box-shadow: 0 4px 20px rgba(120,90,30,0.2), inset 0 1px 0 rgba(255,255,255,0.85);
+}
+
+/* Dark metal (1500+) */
+.bv3--dark-metal {
+  background: linear-gradient(145deg, #1a1928 0%, #22203a 55%, #191828 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Carbon fiber (More Accurate Matches) */
+.bv3--carbon {
+  background:
+    repeating-linear-gradient(45deg,
+      rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px,
+      transparent 1px, transparent 4px),
+    repeating-linear-gradient(-45deg,
+      rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px,
+      transparent 1px, transparent 4px),
+    linear-gradient(145deg, #181818 0%, #1f1f1f 50%, #181818 100%);
+  border: 1px solid rgba(90,90,90,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* Dark feature card (Deeply Evaluated, Efficient Scale) */
+.bv3--dark {
+  background: linear-gradient(145deg, #18182a 0%, #1c1c30 60%, #18182a 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Bronze copper (2Mn+) */
+.bv3--bronze {
+  background: linear-gradient(145deg,
+    #3e2208 0%, #6b3c18 25%, #96561e 50%,
+    #7d4818 75%, #4a2a0c 100%);
+  border: 1px solid rgba(200,140,50,0.45);
+  box-shadow: 0 4px 20px rgba(100,50,10,0.5), inset 0 1px 0 rgba(255,200,80,0.15);
+}
+
+/* ─── NUMBER STATS ─── */
+.bv3__num {
+  font-size: 54px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.bv3__num--orange {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bv3__label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ─── CENTER AMETHYST CARD ─── */
+.bv3--center {
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+/* Floating orb above center card */
+.bv3-orb {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  z-index: 20;
+  filter:
+    drop-shadow(0 0 12px rgba(200,150,255,0.9))
+    drop-shadow(0 0 30px rgba(180,100,255,0.6));
+  animation: bentOrbFloat 5s ease-in-out infinite;
+}
+@keyframes bentOrbFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+.bv3-orb__img { width: 100%; height: 100%; object-fit: contain; }
+
+/* Circuit board decorations */
+.bv3-circuit {
+  position: absolute;
+  top: 10px;
+  width: 70px;
+  height: 60px;
+  background-image:
+    linear-gradient(rgba(180,140,255,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180,140,255,0.3) 1px, transparent 1px);
+  background-size: 10px 10px;
+  border-radius: 6px;
+  opacity: 0.5;
+}
+.bv3-circuit--left { left: 10px; }
+.bv3-circuit--right { right: 10px; }
+
+.bv3__center-text { z-index: 5; position: relative; }
+.bv3__center-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+.bv3__center-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* ─── PEARL CARD ─── */
+.bv3--pearl { justify-content: flex-start; gap: 10px; }
+.bv3__pearl-icon { font-size: 44px; }
+.bv3__feature-title--dark { color: #1a1000 !important; }
+.bv3__feature-desc--dark { color: #4a3820 !important; }
+
+/* ─── FEATURE CARD TEXTS ─── */
+.bv3__feature-text { flex: 1; }
+.bv3__feature-title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.bv3__feature-desc {
+  color: rgba(255,255,255,0.6);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+.bv3__feat-icon { font-size: 30px; margin-bottom: 10px; }
+.bv3__gold-icon {
+  font-size: 32px;
+  align-self: flex-end;
+  margin-top: 8px;
+}
+
+/* ─── LED DOTS ─── */
+.bv3-leds { display: flex; gap: 8px; margin-top: 10px; }
+.bv3-led { display: block; width: 11px; height: 11px; border-radius: 50%; }
+.bv3-led--r { background: #ef4444; box-shadow: 0 0 8px rgba(239,68,68,0.8); }
+.bv3-led--y { background: #f59e0b; box-shadow: 0 0 8px rgba(245,158,11,0.8); }
+.bv3-led--b { background: #3b82f6; box-shadow: 0 0 8px rgba(59,130,246,0.8); }
+
+/* ─── BRONZE DIAMOND ─── */
+.bv3__diamond {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-size: 18px;
+  color: rgba(240,190,80,0.55);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .bento-v3-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+  .bv3--amethyst {
+    grid-column: 1 / span 2 !important;
+    grid-row: auto !important;
+    min-height: 280px;
+    padding-top: 80px;
+  }
+  .bv3-orb { top: -40px; width: 90px; height: 90px; }
+}
+@media (max-width: 640px) {
+  .bento-v3-grid { grid-template-columns: 1fr; }
+  .bv3--amethyst { grid-column: 1 !important; }
+  .bento-v3-frame { padding: 10px; border-radius: 20px; }
+  .bv3__center-title { font-size: 20px; }
+  .bv3__num { font-size: 42px; }
+}
 
 .bento-outer-frame {
   max-width: 1200px;
