@@ -1362,7 +1362,7 @@
 /* ══════════════ INTRO SECTION (DOMED TOP) ══════════════ */
 .intro-section {
   position: relative;
-  background: #02040a; /* Very dark, almost black to match the screenshot */
+  background: transparent; /* Changed to transparent to show project background */
   padding: 80px 20px 60px;
   text-align: center;
   z-index: 2;
@@ -1376,9 +1376,10 @@
   left: -10%;
   width: 120%;
   height: 100px;
-  background: #02040a;
+  background: transparent; /* Changed to transparent */
   border-radius: 50%;
-  box-shadow: 0 -10px 40px rgba(100, 150, 255, 0.1), 0 -2px 10px rgba(255, 255, 255, 0.05); /* The subtle white/blue top glow */
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Keeps the dome outline */
+  box-shadow: 0 -10px 40px rgba(100, 150, 255, 0.1); /* The subtle top glow */
   z-index: -1;
 }
 
