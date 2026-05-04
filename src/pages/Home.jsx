@@ -276,6 +276,89 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ══════════════════════════ PREMIUM BENTO GRID (AI Features & Stats) ══════════════════════════ */}
+      <section className="bento-section">
+        <div className="container">
+          <div className="bento-grid">
+            {/* Row 1 & 2: Col 1 */}
+            <div className="bento-card bento-card--stat" style={{ gridRow: 'span 2' }}>
+              <div style={{ marginBottom: '24px' }}>
+                <h3>20</h3>
+                <p>Years of Industry Presence</p>
+              </div>
+              <div>
+                <h3>25K+</h3>
+                <p>Hires</p>
+              </div>
+            </div>
+            
+            {/* Row 1 & 2: Col 2 & 3 (Main AI Feature) */}
+            <div className="bento-card bento-card--main">
+              <div className="bento-label">Talent Advisory with</div>
+              <h2>Deep Evaluation & Smart Hiring with AI</h2>
+              <div className="ai-orb-container">
+                <img src="/images/ai_glowing_orb.png" alt="AI Glowing Orb" />
+              </div>
+            </div>
+
+            {/* Row 1 & 2: Col 4 */}
+            <div className="bento-card bento-card--feature">
+              <div className="bento-icon-wrapper">
+                <Target size={32} />
+              </div>
+              <div>
+                <h4>Human + AI Synergy</h4>
+                <p>Automation empowers (not replaces) our seasoned recruiters.</p>
+              </div>
+            </div>
+
+            {/* Row 3 & 4: Col 1 */}
+            <div className="bento-card bento-card--feature">
+              <div>
+                <h4 style={{ fontSize: '20px', marginBottom: '16px' }}>More Accurate Matches</h4>
+                <p>80% reduction in candidate mismatches, 63% higher offer-acceptance.</p>
+              </div>
+              <div className="bento-icon-wrapper" style={{ alignSelf: 'flex-start', marginTop: '20px' }}>
+                <CheckCircle size={32} />
+              </div>
+            </div>
+
+            {/* Row 3 & 4: Col 2 */}
+            <div className="bento-card bento-card--feature">
+              <div className="bento-icon-wrapper">
+                <Users size={32} />
+              </div>
+              <div>
+                <h4>Deeply Evaluated Talent</h4>
+                <p>Interview only those who've cleared AI and expert benchmarks.</p>
+              </div>
+            </div>
+
+            {/* Row 3 & 4: Col 3 */}
+            <div className="bento-card bento-card--feature">
+              <div className="bento-icon-wrapper">
+                <Rocket size={32} />
+              </div>
+              <div>
+                <h4>Efficient Scale</h4>
+                <p>Handle campus drives, volume hiring, and niche searches with confidence.</p>
+              </div>
+            </div>
+
+            {/* Row 3 & 4: Col 4 (Stats) */}
+            <div className="bento-card bento-card--stat" style={{ gridRow: 'span 2' }}>
+              <div style={{ marginBottom: '24px' }}>
+                <h3>1500+</h3>
+                <p>Customers</p>
+              </div>
+              <div>
+                <h3>2Mn+</h3>
+                <p>Talent Pool</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ══════════════════════════ SECTORS (Industries We Serve) ══════════════════════════ */}
       <section className="section sectors-section" style={{ paddingTop: '100px' }}>
