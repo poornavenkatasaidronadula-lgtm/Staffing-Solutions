@@ -276,6 +276,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ══════════════════════════ INTRO SECTION (Domed Top) ══════════════════════════ */}
+      <section className="intro-section">
+        <div className="container">
+          <h2 className="intro-title">We Hired Exceptional Talents<br />for Top Brands</h2>
+          
+          <div className="intro-content">
+            <h3 className="intro-subtitle">AI Augmented<br />Talent Advisory & Hiring</h3>
+            <p className="intro-text">
+              <strong>Staffing Solutions</strong> is a premier AI-augmented Talent Advisory Firm, trusted by top enterprises to hire exceptional talent across tech, non-tech, and emerging skills. We blend 20+ years of expertise with advanced AI to deliver hiring outcomes that are faster, sharper, and aligned with your goals—helping you build teams that fuel growth and innovation.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ══════════════════════════ PREMIUM BENTO GRID (AI Features & Stats) ══════════════════════════ */}
       <section className="bento-section">
         <div className="container">
