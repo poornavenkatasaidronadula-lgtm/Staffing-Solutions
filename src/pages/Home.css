@@ -1437,7 +1437,26 @@
   z-index: 2;
 }
 
-/* ── Outer Frame (the dark metallic border container) ── */
+.bento-img-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bento-full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease;
+}
+
+.bento-full-img:hover {
+  transform: scale(1.01);
+}
+
+
 .bento-outer-frame {
   max-width: 1200px;
   margin: 0 auto;

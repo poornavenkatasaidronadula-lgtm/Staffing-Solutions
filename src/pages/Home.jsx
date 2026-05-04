@@ -291,83 +291,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ PREMIUM BENTO GRID (AI Features & Stats) ══════════════════════════ */}
+      {/* ══════════════════════════ BENTO INFOGRAPHIC ══════════════════════════ */}
       <section className="bento-section">
-        <div className="bento-outer-frame">
-          <div className="bento-grid-v2">
-
-            {/* ── COL 1, ROW 1: "20" Blue Metallic ── */}
-            <div className="bv2-card bv2-card--blue-metal bv2-stat">
-              <h3 className="bv2-stat__num">20</h3>
-              <p className="bv2-stat__label">Years of Industry<br/>Presence</p>
-            </div>
-
-            {/* ── COL 2–3, ROW 1–2: Center Amethyst + Orb ── */}
-            <div className="bv2-card bv2-card--amethyst bv2-center" style={{ gridColumn: 'span 2', gridRow: 'span 2' }}>
-              <div className="bv2-orb-wrap">
-                <img src="/images/bento_main_premium.png" alt="AI Diamond Orb" className="bv2-orb-img" />
-              </div>
-              <div className="bv2-center__text">
-                <span className="bv2-label">Talent Advisory with</span>
-                <h2 className="bv2-center__title">Deep Evaluation &amp; Smart Hiring with AI</h2>
-              </div>
-            </div>
-
-            {/* ── COL 4, ROW 1–2: Human + AI Synergy Pearl ── */}
-            <div className="bv2-card bv2-card--pearl bv2-feature" style={{ gridRow: 'span 2' }}>
-              <div className="bv2-pearl-icon">🤖</div>
-              <h4 className="bv2-feature__title">Human + AI Synergy</h4>
-              <p className="bv2-feature__desc">Automation empowers (Not replaces) our seasoned recruiters.</p>
-            </div>
-
-            {/* ── COL 1, ROW 2: "25K+" Lapis Lazuli ── */}
-            <div className="bv2-card bv2-card--lapis bv2-stat">
-              <h3 className="bv2-stat__num">25K+</h3>
-              <p className="bv2-stat__label">Hires</p>
-            </div>
-
-            {/* ── COL 4, ROW 3: "1500+" Dark Metallic ── */}
-            <div className="bv2-card bv2-card--dark-metal bv2-stat" style={{ gridRow: 'span 1' }}>
-              <h3 className="bv2-stat__num bv2-stat__num--orange">1500+</h3>
-              <p className="bv2-stat__label">Customers</p>
-              <div className="bv2-led-dots">
-                <span className="bv2-dot bv2-dot--red"></span>
-                <span className="bv2-dot bv2-dot--yellow"></span>
-                <span className="bv2-dot bv2-dot--blue"></span>
-              </div>
-            </div>
-
-            {/* ── COL 1, ROW 3: More Accurate Matches Carbon ── */}
-            <div className="bv2-card bv2-card--carbon bv2-feature">
-              <div>
-                <h4 className="bv2-feature__title bv2-feature__title--light">More Accurate Matches</h4>
-                <p className="bv2-feature__desc">80% reduction in candidate mismatches, 63% higher offer-acceptance</p>
-              </div>
-              <div className="bv2-gold-icon">📋</div>
-            </div>
-
-            {/* ── COL 2, ROW 3: Deeply Evaluated Talent ── */}
-            <div className="bv2-card bv2-card--dark bv2-feature">
-              <div className="bv2-feature-icon">👥</div>
-              <h4 className="bv2-feature__title">Deeply Evaluated Talent</h4>
-              <p className="bv2-feature__desc">Interview only those who've cleared AI and expert benchmarks</p>
-            </div>
-
-            {/* ── COL 3, ROW 3: Efficient Scale ── */}
-            <div className="bv2-card bv2-card--dark bv2-feature">
-              <div className="bv2-feature-icon">⚙️</div>
-              <h4 className="bv2-feature__title">Efficient Scale</h4>
-              <p className="bv2-feature__desc">Handle campus drives, volume hiring, and niche searches with confidence</p>
-            </div>
-
-            {/* ── COL 4, ROW 4: "2Mn+" Bronze ── */}
-            <div className="bv2-card bv2-card--bronze bv2-stat">
-              <h3 className="bv2-stat__num bv2-stat__num--orange">2Mn+</h3>
-              <p className="bv2-stat__label">Talent Pool</p>
-              <div className="bv2-diamond-mark">✦</div>
-            </div>
-
-          </div>
+        <div className="bento-img-wrapper">
+          <img
+            src="/images/bento_full_infographic.png"
+            alt="AI Augmented Talent Advisory — Deep Evaluation & Smart Hiring with AI"
+            className="bento-full-img"
+          />
         </div>
       </section>
 
