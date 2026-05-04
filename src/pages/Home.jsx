@@ -264,7 +264,7 @@ export default function Home() {
             </h1>
 
             <p className="hero__subhead-left delay-100 animate-fade-up">
-              Connecting elite talent with innovative businesses. 
+              Connecting elite talent with innovative businesses.
               Experience premium hiring powered by domain experts and advanced technology.
             </p>
 
@@ -277,163 +277,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ LOGO STRIP (Client Logos) ══════════════════════════ */}
-      <section className="logo-strip">
-        <div className="container">
-          <p className="logo-strip__label">Trusted by leading companies across India & beyond</p>
-          <div className="logo-strip__track">
-            {['Infosys', 'Wipro', 'Zomato', 'Paytm', 'Razorpay', 'CRED', 'Meesho', 'BharatPe', 'Slice', 'Groww', 'PhonePe', 'Dream11'].map(logo => (
-              <div key={logo} className="logo-strip__logo">{logo}</div>
-            ))}
-            {['Infosys', 'Wipro', 'Zomato', 'Paytm', 'Razorpay', 'CRED', 'Meesho', 'BharatPe'].map(logo => (
-              <div key={logo + '_2'} className="logo-strip__logo">{logo}</div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ STATS ══════════════════════════ */}
-      <section className="section stats-section" ref={statsRef}>
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((s) => (
-              <StatCard key={s.label} {...s} animate={statsInView} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ HOW IT WORKS ══════════════════════════ */}
-      <section className="section process-section">
+      {/* ══════════════════════════ SECTORS (Industries We Serve) ══════════════════════════ */}
+      {/* Exact Zyoin Structure: Immediately after Hero */}
+      <section className="section sectors-section" style={{ paddingTop: '100px' }}>
         <div className="container">
           <div className="section-header text-center">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Our Process</div>
-            <h2 className="section-title">Hire Smarter in <span className="text-gradient">3 Simple Steps</span></h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>From first call to final offer — our AI-powered process is built for speed and precision.</p>
-          </div>
-          <div className="process-steps">
-            {[
-              { step: '01', icon: '🎯', title: 'Define Your Need', desc: 'Share your role requirements, culture, and timeline. Our advisors craft a precision hiring brief in under 24 hours.' },
-              { step: '02', icon: '🤖', title: 'AI Matches & Vets', desc: 'Our Edge-AI™ scans 2M+ profiles, ranks by 50+ parameters, and our recruiters curate only the top 1% for your role.' },
-              { step: '03', icon: '🚀', title: 'You Hire, We Handle', desc: 'Receive pre-vetted shortlists within 7 days. We manage scheduling, assessments, and offer negotiation end-to-end.' },
-            ].map(({ step, icon, title, desc }) => (
-              <div key={step} className="process-step">
-                <div className="process-step__number">{step}</div>
-                <div className="process-step__icon">{icon}</div>
-                <h3 className="process-step__title">{title}</h3>
-                <p className="process-step__desc">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ EDGE AI FEATURE ══════════════════════════ */}
-      <section className="section edge-section">
-        <div className="container">
-          <div className="edge-layout">
-            {/* Left: Visual */}
-            <div className="edge-visual">
-              <div className="edge-orb" />
-              <div className="edge-card edge-card--main">
-                <div className="edge-card__label">Edge-AI™ Platform</div>
-                <div className="edge-metrics">
-                  {[
-                    { label: 'Shortlisting Speed', value: 70, unit: '% faster' },
-                    { label: 'Match Accuracy', value: 94, unit: '% precision' },
-                    { label: 'Offer Acceptance', value: 88, unit: '% rate' },
-                  ].map(({ label, value, unit }) => (
-                    <div key={label} className="edge-metric-item">
-                      <div className="edge-metric-header">
-                        <span className="edge-metric-label">{label}</span>
-                        <span className="edge-metric-value">{value}{unit}</span>
-                      </div>
-                      <div className="edge-metric-bar">
-                        <div className="edge-metric-fill" style={{ width: `${value}%` }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="edge-pill edge-pill--1"><Zap size={13} /> AI Ranked</div>
-              <div className="edge-pill edge-pill--2"><Shield size={13} /> Pre-Vetted</div>
-              <div className="edge-pill edge-pill--3"><BarChart3 size={13} /> Benchmarked</div>
-            </div>
-
-            {/* Right: Content */}
-            <div className="edge-content">
-              <div className="section-label">Our Technology</div>
-              <h2 className="section-title">
-                Introducing{' '}
-                <span className="text-gradient">Edge-AI™</span>
-                <br />Smarter Hiring, Every Time
-              </h2>
-              <p className="section-subtitle">
-                Our proprietary AI model combines behavioral assessments, role-specific benchmarks,
-                and recruiter intelligence to deliver pre-vetted, culture-fit candidates — at unprecedented speed.
-              </p>
-
-              <div className="edge-features">
-                {[
-                  { icon: Target, title: 'AI-Ranked Matching', desc: 'Candidates ranked and scored based on 50+ data parameters.' },
-                  { icon: Shield, title: 'Behavioral Assessment', desc: 'Deep evaluation of cultural fit, not just technical skills.' },
-                  { icon: BarChart3, title: 'Market Intelligence', desc: 'Compensation benchmarks and skill heatmaps in real-time.' },
-                  { icon: Rocket, title: 'Auto-benchmarking', desc: 'Role-specific benchmarks updated against live market data.' },
-                ].map(({ icon: Icon, title, desc }) => (
-                  <div key={title} className="edge-feature">
-                    <div className="edge-feature__icon"><Icon size={18} /></div>
-                    <div>
-                      <h4 className="edge-feature__title">{title}</h4>
-                      <p className="edge-feature__desc">{desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <Link to="/hire" className="btn btn-primary" style={{ marginTop: '32px' }}>
-                See How It Works <ArrowRight size={16} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ SERVICES ══════════════════════════ */}
-      <section className="section services-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <div className="section-label" style={{ justifyContent: 'center' }}>What We Offer</div>
-            <h2 className="section-title">End-to-End <span className="text-gradient">Talent Solutions</span></h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              From entry-level to C-suite, contract to permanent — we cover every hiring need
-              with speed, precision, and strategic foresight.
-            </p>
-          </div>
-
-          <div className="services-grid">
-            {services.map((service, i) => (
-              <Link key={service.title} to={service.link} className={`service-card service-card--${service.color}`}
-                style={{ animationDelay: `${i * 0.07}s` }}>
-                <div className="service-card__icon">{service.icon}</div>
-                <div className="service-card__body">
-                  <h3 className="service-card__title">
-                    {service.title}
-                    {service.badge && <span className="service-card__badge">{service.badge}</span>}
-                  </h3>
-                  <p className="service-card__desc">{service.desc}</p>
-                </div>
-                <div className="service-card__arrow"><ArrowRight size={16} /></div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ SECTORS ══════════════════════════ */}
-      <section className="section sectors-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Industries We Serve</div>
             <h2 className="section-title">Sector-Specific <span className="text-gradient">Expertise</span></h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>Deep domain knowledge across the most competitive and fast-moving sectors.</p>
           </div>
@@ -462,45 +310,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ WHY US ══════════════════════════ */}
-      <section className="section why-section">
+      {/* ══════════════════════════ SERVICES (End-to-End Talent Solutions) ══════════════════════════ */}
+      {/* Exact Zyoin Structure: Services come next */}
+      <section className="section services-section">
         <div className="container">
           <div className="section-header text-center">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Why StaffingEdge</div>
-            <h2 className="section-title">
-              The Smarter Way to <span className="text-gradient">Hire</span>
-            </h2>
+            <h2 className="section-title">End-to-End <span className="text-gradient">Talent Solutions</span></h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>
+              From entry-level to C-suite, contract to permanent — we cover every hiring need
+              with speed, precision, and strategic foresight.
+            </p>
           </div>
-          <div className="why-grid">
-            {[
-              { icon: '⚡', title: '70% Faster', desc: 'Shortlisting powered by AI that processes 1000+ profiles in minutes.' },
-              { icon: '🎯', title: '94% Match Rate', desc: 'Precision AI-matching across 50+ behavioral and technical parameters.' },
-              { icon: '👥', title: '2M+ Pool', desc: 'Pre-vetted talent database built over two decades of industry work.' },
-              { icon: '🌏', title: 'Global Reach', desc: 'Hiring expertise across India, MENA, APAC, ANZ, and beyond.' },
-              { icon: '🔒', title: 'Pre-Vetted Only', desc: 'Every candidate is assessed, benchmarked, and culture-checked.' },
-              { icon: '📈', title: 'Data-Driven', desc: 'Market intelligence and compensation benchmarks at your fingertips.' },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="why-card">
-                <div className="why-card__icon">{icon}</div>
-                <h4 className="why-card__title">{title}</h4>
-                <p className="why-card__desc">{desc}</p>
-              </div>
+
+          <div className="services-premium-list">
+            {services.map((service, i) => (
+              <Link key={service.title} to={service.link} className="service-row-card">
+                <div className="service-row-card__icon-box">
+                  <span className="service-row-card__icon">{service.icon}</span>
+                </div>
+                <div className="service-row-card__content">
+                  <h3 className="service-row-card__title">
+                    {service.title}
+                    {service.badge && <span className="service-row-card__badge">{service.badge}</span>}
+                  </h3>
+                  <p className="service-row-card__desc">{service.desc}</p>
+                </div>
+                <div className="service-row-card__action">
+                  <ArrowRight size={24} className="service-row-card__arrow" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════ TESTIMONIALS ══════════════════════════ */}
+      {/* ══════════════════════════ TESTIMONIALS (From Their Experience) ══════════════════════════ */}
+      {/* Exact Zyoin Structure: Testimonials follows services */}
       <section className="section testimonials-section">
         <div className="container">
           <div className="section-header text-center">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Client Stories</div>
-            <h2 className="section-title">
-              From Their Experience <span className="text-gradient">to Your Inspiration</span>
-            </h2>
+            <h2 className="section-title">From Their Experience <span className="text-gradient">to Your Inspiration</span></h2>
           </div>
 
-          {/* Testimonials grid */}
           <div className="testimonials-grid">
             {testimonials.map((t, i) => (
               <div key={i} className="tcard">
@@ -523,71 +374,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════ CTA BANNER ══════════════════════════ */}
-      <section className="cta-banner">
-        <div className="cta-banner__bg" />
-        <div className="container">
-          <div className="cta-banner__content">
-            <div className="cta-banner__text">
-              <Globe size={48} className="cta-banner__icon" />
-              <h2>Ready to Hire Your<br /><span className="text-gradient">Dream Team?</span></h2>
-              <p>Get a free consultation with our talent advisors. No obligations, pure clarity.</p>
-            </div>
-            <div className="cta-banner__actions">
-              <Link to="/hire" className="btn btn-primary btn-lg">
-                Start Hiring Now <ArrowRight size={18} />
-              </Link>
-              <Link to="/contact" className="btn btn-outline btn-lg">Free Consultation</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ FAQ ══════════════════════════ */}
-      <section className="section faq-section" id="faq">
-        <div className="container">
-          <div className="faq-layout">
-            <div className="faq-header">
-              <div className="section-label">Got Questions?</div>
-              <h2 className="section-title">
-                Frequently Asked <span className="text-gradient">Questions</span>
-              </h2>
-              <p className="section-subtitle">
-                Everything you need to know about our hiring process, technology, and solutions.
-              </p>
-              <Link to="/contact" className="btn btn-outline" style={{ marginTop: '24px' }}>
-                Ask Us Anything <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            <div className="faq-list">
-              {faqs.map(({ q, a }) => (
-                <FaqItem key={q} question={q} answer={a} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ CONTACT FORM ══════════════════════════ */}
+      {/* ══════════════════════════ CONTACT FORM (Fill Out the form to get started) ══════════════════════════ */}
+      {/* Exact Zyoin Structure: Contact form next */}
       <section className="section contact-section" id="contact">
         <div className="container">
           <div className="contact-layout">
             <div className="contact-info">
-              <div className="section-label">Get Started</div>
-              <h2 className="section-title">
-                Let's Find Your <span className="text-gradient">Perfect Hire</span>
-              </h2>
+              <h2 className="section-title">Fill Out the form to <span className="text-gradient">get started</span></h2>
               <p className="section-subtitle">
-                Fill out the form and our talent advisors will reach out within 24 hours.
-                No spam, just solutions.
+                Looking to hire or find a job? We help businesses hire top talent and job seekers find great opportunities. Reach out and let's get started.
               </p>
-
               <div className="contact-points">
                 {[
                   { icon: '⚡', text: 'Response within 24 hours guaranteed' },
                   { icon: '🎯', text: 'Tailored hiring strategy for your needs' },
-                  { icon: '🆓', text: 'First consultation is completely free' },
                   { icon: '🌐', text: 'Available across 10+ countries' },
                 ].map(({ icon, text }) => (
                   <div key={text} className="contact-point">
@@ -641,6 +441,24 @@ export default function Home() {
                 🔒 Your information is secure and will never be shared.
               </p>
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════ FAQ (Zyoin is India's leading...) ══════════════════════════ */}
+      {/* Exact Zyoin Structure: FAQ at the bottom */}
+      <section className="section faq-section" id="faq">
+        <div className="container">
+          <div className="faq-layout">
+            <div className="faq-header">
+              <h2 className="section-title">Frequently Asked <span className="text-gradient">Questions</span></h2>
+              <p className="section-subtitle">Everything you need to know about our hiring process, technology, and solutions.</p>
+            </div>
+            <div className="faq-list">
+              {faqs.map(({ q, a }) => (
+                <FaqItem key={q} question={q} answer={a} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
