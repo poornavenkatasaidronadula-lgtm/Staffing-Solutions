@@ -295,31 +295,26 @@ export default function Home() {
       <section className="bento-section">
         <div className="container">
           <div className="bento-grid">
-            {/* Row 1 & 2: Col 1 */}
-            <div className="bento-card bento-card--stat" style={{ gridRow: 'span 2' }}>
-              <div style={{ marginBottom: '24px' }}>
-                <h3>20</h3>
-                <p>Years of Industry Presence</p>
-              </div>
-              <div>
-                <h3>25K+</h3>
-                <p>Hires</p>
-              </div>
+
+            {/* Col 1: Stats Stack */}
+            <div className="bento-card bento-card--stat bento-stat-20" style={{ gridRow: 'span 1' }}>
+              <h3>20</h3>
+              <p>Years of Industry Presence</p>
             </div>
-            
-            {/* Row 1 & 2: Col 2 & 3 (Main AI Feature) */}
-            <div className="bento-card bento-card--main">
-              <div className="bento-label">Talent Advisory with</div>
-              <h2>Deep Evaluation & Smart Hiring with AI</h2>
-              <div className="ai-orb-container">
-                <img src="/images/ai_glowing_orb.png" alt="AI Glowing Orb" />
+
+            {/* Col 2+3: Main Image Card (spans 2 cols, 2 rows) */}
+            <div className="bento-card bento-card--main-img" style={{ gridColumn: 'span 2', gridRow: 'span 2' }}>
+              <img src="/images/bento_main_premium.png" alt="AI Augmented Talent Advisory" className="bento-main-bg-img" />
+              <div className="bento-main-overlay">
+                <div className="bento-label">Talent Advisory with</div>
+                <h2>Deep Evaluation &amp; Smart Hiring with AI</h2>
               </div>
             </div>
 
-            {/* Row 1 & 2: Col 4 */}
-            <div className="bento-card bento-card--feature">
+            {/* Col 4: Human + AI Synergy */}
+            <div className="bento-card bento-card--feature bento-synergy" style={{ gridRow: 'span 1' }}>
               <div className="bento-icon-wrapper">
-                <Target size={32} />
+                <Target size={28} />
               </div>
               <div>
                 <h4>Human + AI Synergy</h4>
@@ -327,21 +322,33 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Row 3 & 4: Col 1 */}
-            <div className="bento-card bento-card--feature">
+            {/* Col 1: 25K Hires */}
+            <div className="bento-card bento-card--stat bento-stat-25k" style={{ gridRow: 'span 1' }}>
+              <h3>25K+</h3>
+              <p>Hires</p>
+            </div>
+
+            {/* Col 4: 1500+ Customers */}
+            <div className="bento-card bento-card--stat bento-stat-1500" style={{ gridRow: 'span 1' }}>
+              <h3>1500+</h3>
+              <p>Customers</p>
+            </div>
+
+            {/* Row 3: Col 1 — More Accurate Matches */}
+            <div className="bento-card bento-card--feature bento-accurate">
               <div>
-                <h4 style={{ fontSize: '20px', marginBottom: '16px' }}>More Accurate Matches</h4>
+                <h4>More Accurate Matches</h4>
                 <p>80% reduction in candidate mismatches, 63% higher offer-acceptance.</p>
               </div>
-              <div className="bento-icon-wrapper" style={{ alignSelf: 'flex-start', marginTop: '20px' }}>
-                <CheckCircle size={32} />
+              <div className="bento-icon-wrapper" style={{ alignSelf: 'flex-end', marginTop: '16px' }}>
+                <CheckCircle size={28} />
               </div>
             </div>
 
-            {/* Row 3 & 4: Col 2 */}
+            {/* Row 3: Col 2 — Deeply Evaluated Talent */}
             <div className="bento-card bento-card--feature">
               <div className="bento-icon-wrapper">
-                <Users size={32} />
+                <Users size={28} />
               </div>
               <div>
                 <h4>Deeply Evaluated Talent</h4>
@@ -349,10 +356,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Row 3 & 4: Col 3 */}
+            {/* Row 3: Col 3 — Efficient Scale */}
             <div className="bento-card bento-card--feature">
               <div className="bento-icon-wrapper">
-                <Rocket size={32} />
+                <Rocket size={28} />
               </div>
               <div>
                 <h4>Efficient Scale</h4>
@@ -360,17 +367,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Row 3 & 4: Col 4 (Stats) */}
-            <div className="bento-card bento-card--stat" style={{ gridRow: 'span 2' }}>
-              <div style={{ marginBottom: '24px' }}>
-                <h3>1500+</h3>
-                <p>Customers</p>
-              </div>
-              <div>
-                <h3>2Mn+</h3>
-                <p>Talent Pool</p>
-              </div>
+            {/* Row 3: Col 4 — 2Mn+ */}
+            <div className="bento-card bento-card--stat bento-stat-2mn">
+              <h3>2Mn+</h3>
+              <p>Talent Pool</p>
             </div>
+
           </div>
         </div>
       </section>
