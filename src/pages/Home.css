@@ -1441,10 +1441,9 @@
 }
 
 .bento-img-wrapper {
-  max-width: 900px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 0;
-  border-radius: 24px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1454,6 +1453,8 @@
   width: 100%;
   height: auto;
   display: block;
+  clip-path: inset(2.5% 3% 2.5% 3% round 24px); /* Crops out the baked-in black borders precisely */
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
   transition: transform 0.4s ease;
 }
 
