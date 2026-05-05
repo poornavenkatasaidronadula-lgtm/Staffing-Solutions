@@ -1470,6 +1470,11 @@
   font-weight: 400;
 }
 
+.premium-intro-text strong {
+  color: #fff;
+  font-weight: 600;
+}
+
 .intro-text strong {
   color: #fff;
   font-weight: 600;
