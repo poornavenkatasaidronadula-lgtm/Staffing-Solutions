@@ -19,12 +19,6 @@ export default function BlkBackground() {
         <div className="blk-square blk-sq6" />
         <div className="blk-square blk-sq7" />
 
-        {/* === SCROLL BLOBS: Glowing path images === */}
-        <img alt="" className="blk-blob blk-blob1" src="/img/path1.png" />
-        <img alt="" className="blk-blob blk-blob2" src="/img/path3.png" />
-        <img alt="" className="blk-blob blk-blob3" src="/img/path4.png" />
-        <img alt="" className="blk-blob blk-blob4" src="/img/path5.png" />
-        <img alt="" className="blk-blob blk-blob5" src="/img/path2.png" />
       </div>
     </>
   );

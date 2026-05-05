@@ -117,49 +117,6 @@
   opacity: 0.2;
 }
 
-/* ================================================================
-   SCROLL BLOBS — glowing path images at intervals down the page
-   ================================================================ */
-.blk-blob {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.15;
-  mix-blend-mode: color-dodge;
-  filter: hue-rotate(220deg) saturate(2);
-}
-
-.blk-blob1 {
-  left: -110px;
-  max-width: 60%;
-  top: 100vh;
-}
-
-.blk-blob2 {
-  right: -250px;
-  left: auto;
-  max-width: 70%;
-  top: 230vh;
-}
-
-.blk-blob3 {
-  left: 50px;
-  max-width: 45%;
-  top: 370vh;
-}
-
-.blk-blob4 {
-  right: 3%;
-  left: auto;
-  max-width: 60%;
-  top: 500vh;
-}
-
-.blk-blob5 {
-  left: -80px;
-  max-width: 50%;
-  top: 640vh;
-}
 
 /* ================================================================
    FLOAT ANIMATION
