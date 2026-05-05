@@ -282,6 +282,19 @@ export default function Home() {
       </section>
 
 
+      {/* ══════════════════════════ PREMIUM INTRO SECTION ══════════════════════════ */}
+      <section className="premium-intro-section">
+        <div className="container">
+          <div className="premium-intro-content">
+            <h2 className="premium-intro-title">
+              AI Augmented<br />Talent Advisory & Hiring
+            </h2>
+            <p className="premium-intro-text">
+              India's leading AI-augmented Talent Advisory Firm, trusted by top enterprises to hire exceptional talent across tech, non-tech, and emerging skills. We blend 20+ years of expertise with advanced AI to deliver hiring outcomes that are faster, sharper, and aligned with your goals—helping you build teams that fuel growth and innovation.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ══════════════════════════ PREMIUM BENTO GRID ══════════════════════════ */}
       <section className="bento-section">
