@@ -1443,7 +1443,11 @@
 .bento-img-wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  position: relative;
 }
 
 .bento-final-img {
@@ -1451,13 +1455,12 @@
   height: 550px;
   object-fit: fill;
   display: block;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transform: scale(1.07); /* Zooms in to crop out the outer black frame */
   transition: transform 0.4s ease;
 }
 
-.bento-final-img:hover {
-  transform: scale(1.01);
+.bento-img-wrapper:hover .bento-final-img {
+  transform: scale(1.08); /* slight zoom on hover */
 }
 
 .bento-outer-frame {
