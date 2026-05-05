@@ -124,6 +124,7 @@ const testimonials = [
     rating: 5,
     text: 'StaffingEdge transformed our hiring. We went from weeks to days. Their AI-matching is genuinely impressive and the quality of candidates was far above what we experienced with traditional recruiters.',
     company: 'TechCorp',
+    avatar: '/images/avatar_priya_sharma_1777963329125.png',
   },
   {
     name: 'Arjun Mehta',
@@ -131,6 +132,7 @@ const testimonials = [
     rating: 5,
     text: 'As a fast-growing startup, we needed to hire 40 engineers in 3 months. StaffingEdge delivered in 6 weeks. The cultural fit was exceptional — everyone they placed is still with us.',
     company: 'GrowthStartup',
+    avatar: '/images/avatar_arjun_mehta_1777963365912.png',
   },
   {
     name: 'Sarah Chen',
@@ -138,6 +140,7 @@ const testimonials = [
     rating: 5,
     text: 'We run a GCC with very specific hiring needs. The Talent Intelligence reports alone are worth the partnership. Outstanding data, market benchmarks, and unbeatable talent access.',
     company: 'GlobalGCC',
+    avatar: '/images/avatar_sarah_chen_1777963406035.png',
   },
   {
     name: 'Raj Patel',
@@ -145,6 +148,7 @@ const testimonials = [
     rating: 5,
     text: 'The leadership hiring team is phenomenal. Very discreet, thorough, and connected. They placed our CTO and CFO within 45 days. Incredible outcome.',
     company: 'FinTech Corp',
+    avatar: '/images/avatar_raj_patel_1777963444978.png',
   },
 ];
 
@@ -281,7 +285,7 @@ export default function Home() {
       <section className="intro-section">
         <div className="container">
           <h2 className="intro-title">We Hired Exceptional Talents<br />for Top Brands</h2>
-          
+
           <div className="intro-content">
             <h3 className="intro-subtitle">AI Augmented<br />Talent Advisory & Hiring</h3>
             <p className="intro-text">
@@ -293,76 +297,12 @@ export default function Home() {
 
       {/* ══════════════════════════ PREMIUM BENTO GRID ══════════════════════════ */}
       <section className="bento-section">
-        <div className="bento-container">
-          <div className="bento-grid">
-            
-            {/* ─── 20 Years ─── */}
-            <div className="bcard bcard-20">
-              <h3 className="bcard-num text-orange">20</h3>
-              <p className="bcard-label">Years of Industry<br/>Presence</p>
-            </div>
-
-            {/* ─── 25K+ ─── */}
-            <div className="bcard bcard-25k">
-              <h3 className="bcard-num text-orange">25K+</h3>
-              <p className="bcard-label">Hires</p>
-            </div>
-
-            {/* ─── Center Purple Card ─── */}
-            <div className="bcard bcard-center">
-              <p className="bcard-center-sub">Talent Advisory with</p>
-              <h2 className="bcard-center-title">Deep Evaluation & Smart Hiring<br/>with AI</h2>
-              <div className="bcard-orb-wrapper">
-                <img src="/images/diamond_gem_orb.png" alt="AI Orb" className="bcard-orb" />
-              </div>
-            </div>
-
-            {/* ─── Human + AI Synergy ─── */}
-            <div className="bcard bcard-human">
-              <div className="bcard-icon">🧠</div>
-              <h4 className="bcard-title">Human + AI Synergy</h4>
-              <p className="bcard-desc">Automation empowers<br/>(Not replaces) our<br/>seasoned recruiters.</p>
-            </div>
-
-            {/* ─── More Accurate ─── */}
-            <div className="bcard bcard-accurate">
-              <h4 className="bcard-title">More Accurate Matches</h4>
-              <p className="bcard-desc">80% reduction in candidate<br/>mismatches, 63% higher<br/>offer-acceptance</p>
-              <div className="bcard-icon bcard-icon-bottom">📋</div>
-            </div>
-
-            {/* ─── Deeply Evaluated ─── */}
-            <div className="bcard bcard-deep">
-              <div className="bcard-icon">👥</div>
-              <h4 className="bcard-title">Deeply Evaluated Talent</h4>
-              <p className="bcard-desc">Interview only those<br/>who've cleared AI and<br/>expert benchmarks</p>
-            </div>
-
-            {/* ─── Efficient Scale ─── */}
-            <div className="bcard bcard-scale">
-              <div className="bcard-icon">⚙️</div>
-              <h4 className="bcard-title">Efficient Scale</h4>
-              <p className="bcard-desc">Handle campus drives,<br/>volume hiring, and niche<br/>searches with confidence</p>
-            </div>
-
-            {/* ─── 1500+ ─── */}
-            <div className="bcard bcard-1500">
-              <h3 className="bcard-num text-orange">1500+</h3>
-              <p className="bcard-label">Customers</p>
-              <div className="bcard-dots">
-                <span className="dot dot-w"></span>
-                <span className="dot dot-o"></span>
-              </div>
-            </div>
-
-            {/* ─── 2Mn+ ─── */}
-            <div className="bcard bcard-2mn">
-              <h3 className="bcard-num text-orange">2Mn+</h3>
-              <p className="bcard-label">Talent Pool</p>
-              <div className="bcard-icon bcard-icon-corner">💬</div>
-            </div>
-
-          </div>
+        <div className="bento-img-wrapper">
+          <img
+            src="/images/bento_full_infographic.png"
+            alt="AI Augmented Talent Advisory"
+            className="bento-final-img"
+          />
         </div>
       </section>
 
@@ -411,7 +351,7 @@ export default function Home() {
             <div className="services-sticky-left">
               <div className="sticky-content">
                 <div className="section-label">What We Offer</div>
-                <h2 className="section-title">End-to-End <br/><span className="text-gradient">Talent Solutions</span></h2>
+                <h2 className="section-title">End-to-End <br /><span className="text-gradient">Talent Solutions</span></h2>
                 <p className="section-subtitle">
                   From entry-level to C-suite, contract to permanent — we cover every hiring need
                   with speed, precision, and strategic foresight.
@@ -460,16 +400,16 @@ export default function Home() {
           <div className="testimonials-marquee-track">
             {/* Double map for infinite scroll effect */}
             {[...testimonials, ...testimonials].map((t, i) => (
-              <div key={i} className="tcard tcard--marquee">
-                <div className="tcard__stars">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} size={14} fill="#f59e0b" color="#f59e0b" />
-                  ))}
-                </div>
-                <p className="tcard__text">"{t.text}"</p>
-                <div className="tcard__author">
-                  <div className="tcard__avatar">{t.name.split(' ').map(w => w[0]).join('')}</div>
-                  <div>
+              <div key={i} className="tcard tcard--image-hover">
+                <img src={t.avatar} alt={t.name} className="tcard__bg-img" />
+                <div className="tcard__overlay">
+                  <div className="tcard__stars">
+                    {Array.from({ length: t.rating }).map((_, j) => (
+                      <Star key={j} size={14} fill="#f59e0b" color="#f59e0b" />
+                    ))}
+                  </div>
+                  <p className="tcard__text">"{t.text}"</p>
+                  <div className="tcard__author-info">
                     <span className="tcard__name">{t.name}</span>
                     <span className="tcard__role">{t.role}</span>
                   </div>
