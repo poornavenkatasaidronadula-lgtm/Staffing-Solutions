@@ -27,7 +27,95 @@
   overflow: hidden;
 }
 
+/* ================================================================
+   THE 7 HERO SQUARES
+   Exact colors from the screenshot:
+   - All squares use dark blue gradient: #1d8cf8 → #3358f4
+   - Top-left large: partially off-screen top-left
+   - Top-right large: partially off-screen top-right
+   ================================================================ */
 
+.blk-square {
+  position: absolute;
+  border-radius: 20%;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(150deg, #1d8cf8 0%, #3358f4 100%);
+}
+
+/* Square 1 — LARGE, top-left (partially off screen) */
+.blk-sq1 {
+  animation: blk-float 4s ease-in-out infinite;
+  height: 300px;
+  width: 300px;
+  opacity: 0.7;
+  left: -30px;
+  top: -130px;
+}
+
+/* Square 2 — LARGE, top-right (partially off screen) */
+.blk-sq2 {
+  animation: blk-float 6s ease-in-out infinite;
+  height: 400px;
+  width: 400px;
+  opacity: 0.6;
+  right: -80px;
+  top: -100px;
+}
+
+/* Square 3 — SMALL, bottom-left (partially off screen) */
+.blk-sq3 {
+  animation: blk-float 5s ease-in-out infinite;
+  height: 200px;
+  width: 200px;
+  opacity: 0.6;
+  left: -50px;
+  bottom: 0px;
+  top: auto;
+}
+
+/* Square 4 — SMALL, center-right area (theme accent) */
+.blk-sq4 {
+  animation: blk-float 10s ease-in-out infinite;
+  height: 100px;
+  width: 100px;
+  opacity: 0.9;
+  right: 27%;
+  top: 70vh;
+  background: linear-gradient(150deg, #1d8cf8 0%, #3358f4 100%);
+}
+
+/* Square 5 — MEDIUM, center (very subtle) */
+.blk-sq5 {
+  animation: blk-float 6s ease-in-out infinite;
+  height: 250px;
+  width: 250px;
+  opacity: 0.1;
+  left: 32%;
+  top: 45vh;
+}
+
+/* Square 6 — SMALL, left side */
+.blk-sq6 {
+  animation: blk-float 9s ease-in-out infinite;
+  left: 5%;
+  top: 35vh;
+  height: 80px;
+  width: 80px;
+  opacity: 0.9;
+  background: linear-gradient(150deg, #1d8cf8 0%, #3358f4 100%);
+}
+
+/* Square 7 — LARGE, bottom-right (partially off screen) */
+.blk-sq7 {
+  animation: blk-float 3s ease-in-out infinite;
+  width: 300px;
+  height: 300px;
+  right: -50px;
+  top: auto;
+  bottom: 0px;
+  opacity: 0.2;
+}
 
 
 /* ================================================================
