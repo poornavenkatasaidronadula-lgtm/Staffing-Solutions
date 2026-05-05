@@ -293,12 +293,76 @@ export default function Home() {
 
       {/* ══════════════════════════ PREMIUM BENTO GRID ══════════════════════════ */}
       <section className="bento-section">
-        <div className="bento-img-wrapper">
-          <img
-            src="/images/bento_full_infographic.png"
-            alt="AI Augmented Talent Advisory"
-            className="bento-final-img"
-          />
+        <div className="bento-container">
+          <div className="bento-grid">
+            
+            {/* ─── 20 Years ─── */}
+            <div className="bcard bcard-20">
+              <h3 className="bcard-num text-orange">20</h3>
+              <p className="bcard-label">Years of Industry<br/>Presence</p>
+            </div>
+
+            {/* ─── 25K+ ─── */}
+            <div className="bcard bcard-25k">
+              <h3 className="bcard-num text-orange">25K+</h3>
+              <p className="bcard-label">Hires</p>
+            </div>
+
+            {/* ─── Center Purple Card ─── */}
+            <div className="bcard bcard-center">
+              <p className="bcard-center-sub">Talent Advisory with</p>
+              <h2 className="bcard-center-title">Deep Evaluation & Smart Hiring<br/>with AI</h2>
+              <div className="bcard-orb-wrapper">
+                <img src="/images/diamond_gem_orb.png" alt="AI Orb" className="bcard-orb" />
+              </div>
+            </div>
+
+            {/* ─── Human + AI Synergy ─── */}
+            <div className="bcard bcard-human">
+              <div className="bcard-icon">🧠</div>
+              <h4 className="bcard-title">Human + AI Synergy</h4>
+              <p className="bcard-desc">Automation empowers<br/>(Not replaces) our<br/>seasoned recruiters.</p>
+            </div>
+
+            {/* ─── More Accurate ─── */}
+            <div className="bcard bcard-accurate">
+              <h4 className="bcard-title">More Accurate Matches</h4>
+              <p className="bcard-desc">80% reduction in candidate<br/>mismatches, 63% higher<br/>offer-acceptance</p>
+              <div className="bcard-icon bcard-icon-bottom">📋</div>
+            </div>
+
+            {/* ─── Deeply Evaluated ─── */}
+            <div className="bcard bcard-deep">
+              <div className="bcard-icon">👥</div>
+              <h4 className="bcard-title">Deeply Evaluated Talent</h4>
+              <p className="bcard-desc">Interview only those<br/>who've cleared AI and<br/>expert benchmarks</p>
+            </div>
+
+            {/* ─── Efficient Scale ─── */}
+            <div className="bcard bcard-scale">
+              <div className="bcard-icon">⚙️</div>
+              <h4 className="bcard-title">Efficient Scale</h4>
+              <p className="bcard-desc">Handle campus drives,<br/>volume hiring, and niche<br/>searches with confidence</p>
+            </div>
+
+            {/* ─── 1500+ ─── */}
+            <div className="bcard bcard-1500">
+              <h3 className="bcard-num text-orange">1500+</h3>
+              <p className="bcard-label">Customers</p>
+              <div className="bcard-dots">
+                <span className="dot dot-w"></span>
+                <span className="dot dot-o"></span>
+              </div>
+            </div>
+
+            {/* ─── 2Mn+ ─── */}
+            <div className="bcard bcard-2mn">
+              <h3 className="bcard-num text-orange">2Mn+</h3>
+              <p className="bcard-label">Talent Pool</p>
+              <div className="bcard-icon bcard-icon-corner">💬</div>
+            </div>
+
+          </div>
         </div>
       </section>
 
